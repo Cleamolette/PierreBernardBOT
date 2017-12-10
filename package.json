@@ -3,14 +3,8 @@
   "version": "1.0.0",
   "description": "Discord Bot Test (testing Heroku features)",
   "main": "zouiz.js",
-  "dependencies": {
-    "discord.js": "^11.2.1",
-    "express": "^4.16.2",
-    "youtube-audio-stream": "^0.0.50",
-    "ytdl-core": "^0.18.1"
-  },
-   "scripts": {
-    "start": "node zouiz.js"
+  "scripts": {
+   "start": "node zouiz.js"
   }, 
   "devDependencies": {
   "scripts": {
@@ -27,4 +21,10 @@
   ],
   "author": "Yenaman",
   "license": "ISC"
+  },
+    "dependencies": {
+    "discord.js": "^11.2.1",
+    "express": "^4.16.2",
+    "youtube-audio-stream": "^0.0.50",
+    "ytdl-core": "^0.18.1"
 }
