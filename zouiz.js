@@ -1,9 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-const PORT = process.env.PORT || 3000
-	express()
-  		.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 bot.on('ready', () => {
 	bot.user.setGame("^^");
