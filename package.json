@@ -12,7 +12,7 @@
    "scripts": {
     "start": "node zouiz.js"
   }, 
-  "devDependencies": {},
+  "devDependencies": {
   "scripts": {
     "test": "test"
   },
