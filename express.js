@@ -1,3 +1,3 @@
 const PORT = process.env.PORT || 3000
 	express()
-  		.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  		.listen(PORT, (3000) => console.log(`Listening on ${ PORT }`));
