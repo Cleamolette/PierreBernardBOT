@@ -280,7 +280,7 @@ bot.on('message', message => {
     else if(message.content === "TAISEZ-VOUS") {
         process.exit(1);
     }
-});
+}).listen(process.env.PORT || 5000)
 
 
 bot.login("MjcyNDE2NDIyNDQ0MDA3NDI0.DM08hA.U9Dbtgi-XKWfgZYFcB5JEyflC4A");
