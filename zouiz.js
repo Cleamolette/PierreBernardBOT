@@ -281,7 +281,9 @@ bot.on('message', message => {
         process.exit(1);
     }
 });
-.listen(process.env.PORT || 3000)
 
+const PORT = process.env.PORT || 5000
+express()
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 bot.login("MjcyNDE2NDIyNDQ0MDA3NDI0.DM08hA.U9Dbtgi-XKWfgZYFcB5JEyflC4A");
