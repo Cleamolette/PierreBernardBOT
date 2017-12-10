@@ -1,12 +1,5 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const PORT = process.env.PORT || 5000
-express()
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
-bot.on("ready", () => {
-	console.log("TyelasBOT : Opérationnel ^^");
-});
 
 bot.on('ready', () => {
 	bot.user.setGame("^^");
