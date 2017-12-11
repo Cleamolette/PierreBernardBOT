@@ -1,0 +1,26 @@
+{
+  "name": "this-is-a-discord-bot-test",
+  "version": "1.0.0",
+  "description": "Heroku test",
+  "main": "zouiz.js",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "express": "^4.16.2",
+    "youtube-audio-stream": "^0.0.50",
+    "ytdl-core": "^0.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node zouiz.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yenaman/this-is-a-discord-bot-test.git"
+  },
+  "author": "Yenaman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yenaman/this-is-a-discord-bot-test/issues"
+  },
+  "homepage": "https://github.com/Yenaman/this-is-a-discord-bot-test#readme"
+}
