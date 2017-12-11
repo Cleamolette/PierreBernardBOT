@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const PORT = process.env.PORT || 3000
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 bot.on("ready", () => {
 	console.log("TyelasBOT : Opérationnel ^^");
@@ -270,7 +272,5 @@ bot.on('message', message => {
     }
 });
 
-const PORT = process.env.PORT || 5000
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 bot.login("MjcyNDE2NDIyNDQ0MDA3NDI0.DRCC1g.xj4ppg3xGWjMGo4yjpCb7Ievp40");
