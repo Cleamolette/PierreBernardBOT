@@ -16,6 +16,9 @@ const bot = new Discord.Client();
 
 bot.on("ready", () => {
 	console.log("TyelasBOT : Opérationnel ^^");
+});
+
+bot.on("ready", () => {
 	bot.user.setGame("^^");
 	//bot.user.setUsername('Pierre Bernard')
 	//bot.user.setAvatar("./Nagui.JPG")
