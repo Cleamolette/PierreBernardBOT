@@ -271,7 +271,6 @@ bot.on('message', message => {
 });
 
 const PORT = process.env.PORT || 5000
-express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 bot.login("MjcyNDE2NDIyNDQ0MDA3NDI0.DRCC1g.xj4ppg3xGWjMGo4yjpCb7Ievp40");
