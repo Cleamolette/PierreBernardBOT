@@ -9,15 +9,13 @@ express()
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
+
+
 bot.on("ready", () => {
 	console.log("TyelasBOT : Opérationnel ^^");
-});
-
-bot.on('ready', () => {
 	bot.user.setGame("^^");
 	//bot.user.setUsername('Pierre Bernard')
 	//bot.user.setAvatar("./Nagui.JPG")
@@ -245,40 +243,40 @@ bot.on('message', message => {
 		message.react('🇿')
 	}
     if(message.content === "TAISEZ-VOUS !") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "Taisez-vous !") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "TAISEZ VOUS !") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "Taisez vous !") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "TAISEZ VOUS") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "Taisez vous") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "taisez-vous !") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "taisez vous !") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "taisez vous") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "taisez-vous") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "Taisez-vous") {
-        process.exit(1);
+        process.restart(1);
     }
     else if(message.content === "TAISEZ-VOUS") {
-        process.exit(1);
+        process.restart(1);
     }
 });
 
