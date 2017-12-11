@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
+bot.on("ready", () => {
+	console.log("TyelasBOT : Opérationnel ^^");
+});
 
 bot.on('ready', () => {
 	bot.user.setGame("^^");
@@ -13,52 +16,42 @@ bot.on('message', message => {
 		message.react('〽')
 		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.")
 	}
-})
-
-bot.on('message', message => {
 	if(message.content.includes("😄")) {
 		message.react('😡')
 		console.log("Quelqu'un a osé faire un sourire.")
 	}
-	else if(message.content.includes("😛")) {
+	if(message.content.includes("😛")) {
 		message.react('😡')
 		console.log("Quelqu'un a osé tiré la langue.")
 	}
-	else if(message.content.includes("😡")) {
+	if(message.content.includes("😡")) {
 		message.react(':FeelsHappyHug:371654974351998977')
 		console.log("Quelqu'un est un homme en COLÈRE")
 	}
-})
-
-bot.on('message', message => {
-	if(message.content === "*Hello darkness my old friend*")
+	if(message.content === "*Hello darkness my old friend*") {
 		message.channel.send("TG Huro")
-	if(message.content === "*Hello darkness my old friends*")
+	}
+	if(message.content === "*Hello darkness my old friends*") {
 		message.channel.send("TG Huro")
-	if(message.content === "_Hello darkness my old friend_")
+	}
+	if(message.content === "_Hello darkness my old friend_") {
 		message.channel.send("TG Huro")
-	if(message.content === "_Hello darkness my old friends_")
+	}
+	if(message.content === "_Hello darkness my old friends_") {
 		message.channel.send("TG Huro")
-})
-
-bot.on('message', message => {
-	if(message.content === "TG Huro")
+	}
+	if(message.content === "TG Huro") {
 		message.delete(300)
-})
-
-bot.on('message', message => {
-	if(message.content.includes("Nagui"))
+	}
+	if(message.content.includes("Nagui")) {
 		message.channel.send("NAGUI COUCOU")
-	if(message.content.includes("nagui"))
+	}
+	if(message.content.includes("nagui")) {
 		message.channel.send("NAGUI COUCOU")
-})
-
-bot.on('message', message => {
-	if(message.content === "NAGUI COUCOU")
+	}
+	if(message.content === "NAGUI COUCOU") {
 		message.delete(1000)
-})
-
-bot.on('message', message => {
+	}
 	if(message.content.includes("XD")) {
 		message.react('🇽')
 		message.react('🇩');
@@ -71,20 +64,18 @@ bot.on('message', message => {
 		message.react('🇽')
 		message.react('🇩');
 	}
-})
-
-bot.on('message', message => {
-	if(message.content.includes("?"))
+	if(message.content.includes("?")) {
 		message.react('❓')
-	if(message.content.includes("??"))
+	}
+	if(message.content.includes("??")) {
 		message.react('❔')
-	if(message.content.includes("???"))
+	}
+	if(message.content.includes("???")) {
 		message.react(':mhQuestion:372499150673149952')
-	if(message.content.includes("????"))
+	}
+	if(message.content.includes("????")) {
 		message.react(':zrtPointdinterrogation:372499472271278090')
-})
-
-bot.on('message', message => {
+	}
 	if(message.content === "A") {
 		message.react('🇦')
 	}
@@ -241,9 +232,6 @@ bot.on('message', message => {
 	if(message.content === "z") {
 		message.react('🇿')
 	}
-})
-
-bot.on('message', message => {
     if(message.content === "TAISEZ-VOUS !") {
         process.exit(1);
     }
@@ -282,7 +270,5 @@ bot.on('message', message => {
     }
 });
 
-const PORT = process.env.PORT || 5000
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 bot.login("MjcyNDE2NDIyNDQ0MDA3NDI0.DM08hA.U9Dbtgi-XKWfgZYFcB5JEyflC4A");
