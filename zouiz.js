@@ -243,40 +243,40 @@ bot.on('message', message => {
 		message.react('🇿')
 	}
     if(message.content === "TAISEZ-VOUS !") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "Taisez-vous !") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "TAISEZ VOUS !") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "Taisez vous !") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "TAISEZ VOUS") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "Taisez vous") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "taisez-vous !") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "taisez vous !") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "taisez vous") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "taisez-vous") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "Taisez-vous") {
-        process.restart(1);
+        process.exit(1);
     }
     else if(message.content === "TAISEZ-VOUS") {
-        process.restart(1);
+        process.exit(1);
     }
 });
 
