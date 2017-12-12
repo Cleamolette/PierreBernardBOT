@@ -284,6 +284,9 @@ bot.on('message', message => {
     else if(message.content === "TAISEZ-VOUS") {
         process.exit(1);
     }
+    if(message.edit) {
+    	message.channel.send("Un message a été édité.")
+    }
 });
 
 
