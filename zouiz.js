@@ -24,6 +24,12 @@ bot.on("ready", () => {
 	//bot.user.setAvatar("./Nagui.JPG")
 });
 
+bot.on('message.edit', message => {
+	if(message.edit) {
+		message.channel.send("Message édité !")
+	}
+});
+
 bot.on('message', message => {
 	if(message.content.includes("^^")) {
 		message.react('〽')
@@ -283,9 +289,6 @@ bot.on('message', message => {
     }
     else if(message.content === "TAISEZ-VOUS") {
         process.exit(1);
-    }
-    if(message.edit) {
-    	message.channel.send("Un message a été édité.")
     }
 });
 
