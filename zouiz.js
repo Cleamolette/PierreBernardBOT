@@ -1,15 +1,30 @@
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const config = require ('./config.json');
+
+
 
 bot.on("ready", () => {
 	console.log("TyelasBOT : Opérationnel ^^");
 });
 
-bot.on('ready', () => {
+bot.on("ready", () => {
 	bot.user.setGame("^^");
 	//bot.user.setUsername('Pierre Bernard')
 	//bot.user.setAvatar("./Nagui.JPG")
 });
+
 
 bot.on('message', message => {
 	if(message.content.includes("^^")) {
@@ -232,6 +247,9 @@ bot.on('message', message => {
 	if(message.content === "z") {
 		message.react('🇿')
 	}
+	if(message.content === "Ceci est un test") {
+		message.channel.send("Ceci est un test")
+	}
     if(message.content === "TAISEZ-VOUS !") {
         process.exit(1);
     }
@@ -268,10 +286,40 @@ bot.on('message', message => {
     else if(message.content === "TAISEZ-VOUS") {
         process.exit(1);
     }
+    if(message.content === "!info") {
+    	const embed = {
+  "title": "BOT \"Pierre Bernard\" <:Exotica:345609342264803338>",
+  "description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de Kiron#2609 aussi :eyes:)",
+  "color": 1675721,
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/emojis/280092975407562752.png",
+    "text": "À demain ! TCHAO TCHAO TCHAO"
+  },
+  "thumbnail": {
+    "url": "https://cdn.discordapp.com/avatars/272416422444007424/3301c614cff3044b9daecd0eb01b0b5b.webp"
+  },
+  "author": {
+    "name": "Créateur : Yenaman#4134",
+    "icon_url": "https://cdn.discordapp.com/avatars/267357209187450884/a_10003bc4d8cfd24aab15ad4719009c1d.gif"
+  },
+  "fields": [
+    {
+      "name": "Fonctionnalités",
+      "value": "C'est un bot qui réagit à certaines phrases que **vous** devrez  trouver !"
+    },
+    {
+      "name": "Uptime",
+      "value": "Le bot sera en ligne de 9h du matin à 03h du matin pour votre plus grand bonheur <:blobheart:390132491106779136>"
+    },
+    {
+      "name": "TEDE ! TEDE !",
+      "value": "MANAWI TEDE ! <:TeteEmploi:390132517421973517>"
+    }
+  ]
+};
+message.channel.send({embed});
+    }
 });
 
-const PORT = process.env.PORT || 5000
-express()
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-bot.login("MjcyNDE2NDIyNDQ0MDA3NDI0.DRCC1g.xj4ppg3xGWjMGo4yjpCb7Ievp40");
+bot.login(config.token);
