@@ -25,6 +25,13 @@ bot.on("ready", () => {
 	//bot.user.setAvatar("./Nagui.JPG")
 });
 
+bot.on('message', message => {
+	if(message.content === "!ping") {
+		message.channel.send('Ping du bot en cours...').then(sent => {
+			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
+		});
+	}
+});
 
 bot.on('message', message => {
 	if(message.content.includes("^^")) {
@@ -286,41 +293,38 @@ bot.on('message', message => {
     else if(message.content === "TAISEZ-VOUS") {
         process.exit(1);
     }
-    if (message.content ==='!ping') {
-        message.channel.send(bot.ping);
-    }
     if(message.content === "!info") {
     	const embed = {
-  "title": "BOT \"Pierre Bernard\" <:Exotica:345609342264803338>",
-  "description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de Kiron#2609 aussi :eyes:)",
-  "color": 1675721,
-  "footer": {
-    "icon_url": "https://cdn.discordapp.com/emojis/280092975407562752.png",
-    "text": "À demain ! TCHAO TCHAO TCHAO"
-  },
-  "thumbnail": {
-    "url": "https://cdn.discordapp.com/avatars/272416422444007424/3301c614cff3044b9daecd0eb01b0b5b.webp"
-  },
-  "author": {
-    "name": "Créateur : Yenaman#4134",
-    "icon_url": "https://cdn.discordapp.com/avatars/267357209187450884/a_10003bc4d8cfd24aab15ad4719009c1d.gif"
-  },
-  "fields": [
-    {
-      "name": "Fonctionnalités",
-      "value": "C'est un bot qui réagit à certaines phrases que **vous** devrez  trouver !"
-    },
-    {
-      "name": "Uptime",
-      "value": "Le bot sera en ligne de 9h du matin à 03h du matin pour votre plus grand bonheur <:blobheart:390132491106779136>"
-    },
-    {
-      "name": "TEDE ! TEDE !",
-      "value": "MANAWI TEDE ! <:TeteEmploi:390132517421973517>"
-    }
-  ]
-};
-message.channel.send({embed});
+  			"title": "BOT \"Pierre Bernard\" <:Exotica:345609342264803338>",
+  			"description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de Kiron#2609 aussi :eyes:)",
+  			"color": 1675721,
+  			"footer": {
+    			"icon_url": "https://cdn.discordapp.com/emojis/280092975407562752.png",
+    			"text": "À demain ! TCHAO TCHAO TCHAO"
+  			},
+  			"thumbnail": {
+    			"url": "https://cdn.discordapp.com/avatars/272416422444007424/3301c614cff3044b9daecd0eb01b0b5b.webp"
+  			},
+  			"author": {
+    			"name": "Créateur : Yenaman#4134",
+    			"icon_url": "https://cdn.discordapp.com/avatars/267357209187450884/a_10003bc4d8cfd24aab15ad4719009c1d.gif"
+  			},
+  			"fields": [
+    		{
+      		"name": "Fonctionnalités",
+      		"value": "C'est un bot qui réagit à certaines phrases que **vous** devrez trouver !"
+    		},
+    		{
+     		 "name": "Uptime",
+      		"value": "Le bot sera en ligne de 9h du matin à 03h du matin pour votre plus grand bonheur <:blobheart:390132491106779136>"
+    		},
+    		{
+      		"name": "TEDE ! TEDE !",
+      		"value": "MANAWI TEDE ! <:TeteEmploi:390132517421973517>"
+    		}
+  			]
+		};
+		message.channel.send({embed});
     }
 });
 
