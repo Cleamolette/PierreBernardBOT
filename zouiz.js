@@ -329,7 +329,7 @@ bot.on('message', message => {
 		});
 	}
 	if(message.content === "!membres") {
-		message.channel.send(msg.guild.memberCount)
+		message.channel.send(`Membres dans le serveur : **${guild.memberCount}**`)
 	}
 });
 
