@@ -329,8 +329,7 @@ bot.on('message', message => {
 		});
 	}
 	if(message.content === "!membres") {
-		message.channel.send(`Membres dans le serveur : **${memberCount}**`)
+		message.channel.send(`This guild has ${guild.memberCount} members!`)
 	}
 });
-const memberCount = guild.memberCount;
 bot.login(process.env.TOKEN);
