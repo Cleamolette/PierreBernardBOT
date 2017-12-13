@@ -31,14 +31,6 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message => {
-	if(message.content === "!ping") {
-		message.channel.send('Ping du bot en cours...').then(sent => {
-			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
-		});
-	}
-});
-
-bot.on('message', message => {
 	if(message.content.includes("^^")) {
 		message.react('〽')
 		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.")
@@ -330,7 +322,12 @@ bot.on('message', message => {
   			]
 		};
 		message.channel.send({embed});
-    }
+	}
+	if(message.content === "!ping") {
+		message.channel.send('Ping du bot en cours...').then(sent => {
+			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
+		});
+	}
 });
 
 
