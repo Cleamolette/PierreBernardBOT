@@ -332,5 +332,5 @@ bot.on('message', message => {
 		message.channel.send(`Membres dans le serveur : **${memberCount}**`)
 	}
 });
-
+const memberCount = guild.memberCount;
 bot.login(process.env.TOKEN);
