@@ -328,8 +328,5 @@ bot.on('message', message => {
 			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
 		});
 	}
-	if(message.content === "!membres") {
-		console.log(`This guild has ${guild.memberCount} members!`)
-	}
 });
 bot.login(process.env.TOKEN);
