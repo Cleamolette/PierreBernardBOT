@@ -334,4 +334,4 @@ bot.on('message', message => {
 });
 
 
-bot.login(S3_SECRET);
+bot.login(process.env.S3_SECRET);
