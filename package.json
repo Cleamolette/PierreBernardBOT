@@ -4,6 +4,7 @@
   "description": "Heroku test",
   "main": "zouiz.js",
   "dependencies": {
+    "aws-sdk": "^2.169.0",
     "discord.js": "^11.2.1",
     "express": "^4.16.2",
     "http": "0.0.0",
