@@ -28,7 +28,7 @@ bot.on("ready", () => {
 	bot.user.setGame("^^");
 	//bot.user.setUsername('Pierre Bernard')
 	//bot.user.setAvatar("./Nagui.JPG")
-	bot.status(dnd)
+	bot.status('dnd')
 });
 
 bot.on('message', message => {
