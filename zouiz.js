@@ -28,6 +28,7 @@ bot.on("ready", () => {
 	bot.user.setGame("^^");
 	//bot.user.setUsername('Pierre Bernard')
 	//bot.user.setAvatar("./Nagui.JPG")
+	bot.setStreaming('^^^^^^', 'https://www.twitch.tv/yenaman', 1);
 });
 
 bot.on('message', message => {
@@ -251,9 +252,8 @@ bot.on('message', message => {
 	if(message.content === "z") {
 		message.react('🇿')
 	}
-	if(message.content === "Ceci est un test!") {
-		message.channel.send("Ceci est un test!")
-		setTimeout(5000);
+	if(message.content === "Ceci est un test") {
+		message.channel.send("Ceci est un test")
 	}
     if(message.content === "TAISEZ-VOUS !") {
         process.exit(1);
@@ -330,6 +330,5 @@ bot.on('message', message => {
 		});
 	}
 });
-
 
 bot.login(process.env.TOKEN);
