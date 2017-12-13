@@ -329,7 +329,7 @@ bot.on('message', message => {
 		});
 	}
 	if(message.content === "!membres") {
-		message.channel.send(`This guild has ${guild.memberCount} members!`)
+		console.log(`This guild has ${guild.memberCount} members!`)
 	}
 });
 bot.login(process.env.TOKEN);
