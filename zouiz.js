@@ -11,7 +11,12 @@ express()
 
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const config = require ('./config.json');
+const aws = require('aws-sdk');
+
+let s3 = new aws.S3({
+	accessKeyId: process.env.S3_KEY,
+	secretAccessKey: process.env.S3_SECRET
+});
 
 
 
