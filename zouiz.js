@@ -251,8 +251,9 @@ bot.on('message', message => {
 	if(message.content === "z") {
 		message.react('🇿')
 	}
-	if(message.content === "Ceci est un test") {
-		message.channel.send("Ceci est un test")
+	if(message.content === "Ceci est un test!") {
+		message.channel.send("Ceci est un test!")
+		setTimeout(5000);
 	}
     if(message.content === "TAISEZ-VOUS !") {
         process.exit(1);
