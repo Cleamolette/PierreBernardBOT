@@ -325,7 +325,7 @@ bot.on('message', message => {
 			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
 		});
 	}
-	if(message.content === "!s") { //Embed !s(pam)
+	if(message.content === "!spam") { //Embed !spam
 		const embed = {
 			"title": "Rappel des règles quant au *spam*",
 			"color": 15472173,
