@@ -289,7 +289,7 @@ bot.on('message', message => {
     }
     if(message.content === "!info") { //Embed !info
     	const embed = {
-  			"title": "BOT \"Pierre Bernard\" <:Exotica:345609342264803338>",
+  			"title": "BOT \"Mimiron\" <:Exotica:345609342264803338>",
   			"description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de <@246807099332362240> aussi :eyes:)",
   			"color": 1675721,
   			"footer": {
@@ -297,7 +297,7 @@ bot.on('message', message => {
     			"text": "À demain ! TCHAO TCHAO TCHAO"
   			},
   			"thumbnail": {
-    			"url": "https://cdn.discordapp.com/avatars/272416422444007424/3301c614cff3044b9daecd0eb01b0b5b.webp"
+    			"url": "https://cdn.discordapp.com/attachments/389904952656658432/391005256131018762/Mimiron.jpg"
   			},
   			"author": {
     			"name": "Créateur : Yenaman#4134",
