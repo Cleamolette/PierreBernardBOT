@@ -290,7 +290,7 @@ bot.on('message', message => {
     if(message.content === "!info") { //Embed !info
     	const embed = {
   			"title": "BOT \"Pierre Bernard\" <:Exotica:345609342264803338>",
-  			"description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de Kiron#2609 aussi :eyes:)",
+  			"description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de <@246807099332362240> aussi :eyes:)",
   			"color": 1675721,
   			"footer": {
     			"icon_url": "https://cdn.discordapp.com/emojis/280092975407562752.png",
@@ -310,7 +310,7 @@ bot.on('message', message => {
     		},
     		{
      		 "name": "Uptime",
-      		"value": "Le bot sera en ligne de 9h du matin à 03h du matin pour votre plus grand bonheur <:blobheart:390132491106779136>"
+      		"value": "Le bot sera en ligne de 9h du matin à 03h du matin pour votre plus grand bonheur <:blobheart:390132491106779136> Pourquoi ? Parce que le bot a besoin d'être hors-ligne 6 heures par jour."
     		},
     		{
       		"name": "TEDE ! TEDE !",
@@ -340,6 +340,31 @@ bot.on('message', message => {
 			  {
 				"name": "Règle 5",
 				"value": "Conversations bordel nawak : <#388127187615744002> ou <#388170884722196490>. **Sanction : Rétrogradation**"
+			  }
+			]
+		  };
+		  message.channel.send({embed});
+	}
+	if(messge.content === "!help") { //Embed !help
+		const embed = {
+			"title": "Commandes",
+			"description": "Liste des commandes *\"publiques\"* disponibles. Peu pour le moment.",
+			"color": 12195794,
+			"thumbnail": {
+			  "url": "https://cdn.discordapp.com/emojis/315210423223713802.png"
+			},
+			"fields": [
+			  {
+				"name": "!help",
+				"value": "Affiche ce message"
+			  },
+			  {
+				"name": "!ping",
+				"value": "Envoie une requête au bot et affiche le temps qu'elle a pris pour être renvoyée (le ping du bot en soi)"
+			  },
+			  {
+				"name": "!info",
+				"value": "Affiche tout un tas d'informations au sujet du bot, dont son utilité"
 			  }
 			]
 		  };
