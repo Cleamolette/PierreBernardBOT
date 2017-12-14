@@ -374,16 +374,6 @@ bot.on('message', message => {
 		  };
 		  message.channel.send({embed});
 	}
-	if (message.content === "!kick") {
-		let modRole = message.guild.roles.find("name", "Moderators");
-		if(message.member.roles.has(modRole.id)) { 
-		  let kickMember = message.guild.member(message.mentions.users.first());
-		  message.guild.member(kickMember).kick();
-		  message.channel.sendMessage("Kicked ! :white_check_mark:");
-		} else {
-		  return message.reply("Pas assez de perms pour kick :x:");
-		}
-	  }
 });
 
 bot.login(process.env.TOKEN);
