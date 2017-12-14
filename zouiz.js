@@ -1,33 +1,28 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+const express = require('express') //Port app Heroku
+const path = require('path') //Port app Heroku
+const PORT = process.env.PORT || 5000 //Port app Heroku
 
-express()
+express() //Port app Heroku
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const aws = require('aws-sdk');
+const aws = require('aws-sdk'); //Token Heroku
 
-let s3 = new aws.S3({
+let s3 = new aws.S3({ //Token Heroku
 	accessKeyId: process.env.S3_KEY,
 	secretAccessKey: process.env.TOKEN
 });
 
 
-
-bot.on("ready", () => {
-	console.log("TyelasBOT : Opérationnel ^^");
-});
-
 bot.on("ready", () => {
 	bot.user.setGame("^^");
 	//bot.user.setUsername('Pierre Bernard')
 	//bot.user.setAvatar("./Nagui.JPG")
+	console.log("TyelasBOT : Opérationnel ^^");
 });
 
 bot.on('message', message => {
@@ -251,46 +246,43 @@ bot.on('message', message => {
 	if(message.content === "z") {
 		message.react('🇿')
 	}
-	if(message.content === "Ceci est un test") {
-		message.channel.send("Ceci est un test")
-	}
     if(message.content === "TAISEZ-VOUS !") {
+		process.exit(1);
+    }
+    if(message.content === "Taisez-vous !") {
         process.exit(1);
     }
-    else if(message.content === "Taisez-vous !") {
+    if(message.content === "TAISEZ VOUS !") {
         process.exit(1);
     }
-    else if(message.content === "TAISEZ VOUS !") {
+    if(message.content === "Taisez vous !") {
         process.exit(1);
     }
-    else if(message.content === "Taisez vous !") {
+    if(message.content === "TAISEZ VOUS") {
         process.exit(1);
     }
-    else if(message.content === "TAISEZ VOUS") {
+    if(message.content === "Taisez vous") {
         process.exit(1);
     }
-    else if(message.content === "Taisez vous") {
+    if(message.content === "taisez-vous !") {
         process.exit(1);
     }
-    else if(message.content === "taisez-vous !") {
+    if(message.content === "taisez vous !") {
         process.exit(1);
     }
-    else if(message.content === "taisez vous !") {
+    if(message.content === "taisez vous") {
         process.exit(1);
     }
-    else if(message.content === "taisez vous") {
+    if(message.content === "taisez-vous") {
         process.exit(1);
     }
-    else if(message.content === "taisez-vous") {
+    if(message.content === "Taisez-vous") {
         process.exit(1);
     }
-    else if(message.content === "Taisez-vous") {
+    if(message.content === "TAISEZ-VOUS") {
         process.exit(1);
     }
-    else if(message.content === "TAISEZ-VOUS") {
-        process.exit(1);
-    }
-    if(message.content === "!info") {
+    if(message.content === "!info") { //Embed !info
     	const embed = {
   			"title": "BOT \"Pierre Bernard\" <:Exotica:345609342264803338>",
   			"description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de Kiron#2609 aussi :eyes:)",
@@ -323,12 +315,12 @@ bot.on('message', message => {
 		};
 		message.channel.send({embed});
 	}
-	if(message.content === "!ping") {
+	if(message.content === "!ping") { //Commande !ping
 		message.channel.send('Ping du bot en cours...').then(sent => {
 			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
 		});
 	}
-	if(message.content === "!s") {
+	if(message.content === "!s") { //Embed !s(pam)
 		const embed = {
 			"title": "Rappel des règles quant au *spam*",
 			"color": 15472173,
