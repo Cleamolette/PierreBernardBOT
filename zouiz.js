@@ -82,11 +82,12 @@ bot.on('message', message => {
 		message.react('🇽')
 		message.react('🇩');
 	}
-	if(message.content.includes("?")) {
-		message.react('❓')
-	}
+	//if(message.content.includes("?")) {
+	//	message.react('❓')
+	//}
 	if(message.content.includes("??")) {
 		message.react('❔')
+		message.react('❓');
 	}
 	if(message.content.includes("???")) {
 		message.react(':mhQuestion:372499150673149952')
