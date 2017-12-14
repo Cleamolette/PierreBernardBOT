@@ -330,13 +330,16 @@ bot.on('message', message => {
 	}
 	if(message.content === "!s") {
 		const embed = {
-			"title": "Règle 2",
-			"description": "Pas d'insultes/**Spam**/**Flood** ni racisme, homophobie",
+			"title": "Rappel des règles quant au *spam*",
 			"color": 15472173,
 			"thumbnail": {
 			  "url": "https://cdn.discordapp.com/emojis/332985690075693059.png"
 			},
 			"fields": [
+			  {
+				"name": "Règle 2",
+				"value": "Pas d'insultes/**Spam**/**Flood** ni racisme, homophobie"
+			  },
 			  {
 				"name": "Règle 5",
 				"value": "Conversations bordel nawak : <#388127187615744002> ou <#388170884722196490>. **Sanction : Rétrogradation**"
