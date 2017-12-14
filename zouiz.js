@@ -20,8 +20,8 @@ let s3 = new aws.S3({ //Token Heroku
 
 bot.on("ready", () => {
 	bot.user.setGame("!info");
-	//bot.user.setUsername('Pierre Bernard')
-	//bot.user.setAvatar("./Nagui.JPG")
+	bot.user.setUsername('Mimiron')
+	bot.user.setAvatar("./Mimiron.JPG")
 	console.log("TyelasBOT : Opérationnel ^^");
 });
 
