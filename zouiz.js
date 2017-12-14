@@ -41,6 +41,7 @@ bot.on('message', message => {
 	}
 	if(message.content.includes("😡")) {
 		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
+		message.delete(800);
 		console.log("Quelqu'un est un homme en COLÈRE")
 	}
 	if(message.content === "*Hello darkness my old friend*") {
