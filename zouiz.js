@@ -95,162 +95,162 @@ bot.on('message', message => {
 	if(message.content.includes("????")) {
 		message.react(':zrtPointdinterrogation:372499472271278090')
 	}
-	if(message.content === "A") {
-		message.react('🇦')
-	}
-	if(message.content === "a") {
-		message.react('🇦')
-	}
-	if(message.content === "B") {
-		message.react('🇧')
-	}
-	if(message.content === "b") {
-		message.react('🇧')
-	}
-	if(message.content === "C") {
-		message.react('🇨')
-	}
-	if(message.content === "c") {
-		message.react('🇨')
-	}
-	if(message.content === "D") {
-		message.react('🇩')
-	}
-	if(message.content === "d") {
-		message.react('🇩')
-	}
-	if(message.content === "E") {
-		message.react('🇪')
-	}
-	if(message.content === "e") {
-		message.react('🇪')
-	}
-	if(message.content === "F") {
-		message.react('🇫')
-	}
-	if(message.content === "f") {
-		message.react('🇫')
-	}
-	if(message.content === "G") {
-		message.react('🇬')
-	}
-	if(message.content === "g") {
-		message.react('🇬')
-	}
-	if(message.content === "H") {
-		message.react('🇭')
-	}
-	if(message.content === "h") {
-		message.react('🇭')
-	}
-	if(message.content === "I") {
-		message.react('🇮')
-	}
-	if(message.content === "i") {
-		message.react('🇮')
-	}
-	if(message.content === "J") {
-		message.react('🇯')
-	}
-	if(message.content === "j") {
-		message.react('🇯')
-	}
-	if(message.content === "K") {
-		message.react('🇰')
-	}
-	if(message.content === "k") {
-		message.react('🇰')
-	}
-	if(message.content === "L") {
-		message.react('🇱')
-	}
-	if(message.content === "l") {
-		message.react('🇱')
-	}
-	if(message.content === "M") {
-		message.react('🇲')
-	}
-	if(message.content === "m") {
-		message.react('🇲')
-	}
-	if(message.content === "N") {
-		message.react('🇳')
-	}
-	if(message.content === "n") {
-		message.react('🇳')
-	}
-	if(message.content === "O") {
-		message.react('🇴')
-	}
-	if(message.content === "o") {
-		message.react('🇴')
-	}
-	if(message.content === "P") {
-		message.react('🇵')
-	}
-	if(message.content === "p") {
-		message.react('🇵')
-	}
-	if(message.content === "Q") {
-		message.react('🇶')
-	}
-	if(message.content === "q") {
-		message.react('🇶')
-	}
-	if(message.content === "R") {
-		message.react('🇷')
-	}
-	if(message.content === "r") {
-		message.react('🇷')
-	}
-	if(message.content === "S") {
-		message.react('🇸')
-	}
-	if(message.content === "s") {
-		message.react('🇸')
-	}
-	if(message.content === "T") {
-		message.react('🇹')
-	}
-	if(message.content === "t") {
-		message.react('🇹')
-	}
-	if(message.content === "U") {
-		message.react('🇺')
-	}
-	if(message.content === "u") {
-		message.react('🇺')
-	}
-	if(message.content === "V") {
-		message.react('🇻')
-	}
-	if(message.content === "v") {
-		message.react('🇻')
-	}
-	if(message.content === "W") {
-		message.react('🇼')
-	}
-	if(message.content === "w") {
-		message.react('🇼')
-	}
-	if(message.content === "X") {
-		message.react('🇽')
-	}
-	if(message.content === "x") {
-		message.react('🇽')
-	}
-	if(message.content === "Y") {
-		message.react('🇾')
-	}
-	if(message.content === "y") {
-		message.react('🇾')
-	}
-	if(message.content === "Z") {
-		message.react('🇿')
-	}
-	if(message.content === "z") {
-		message.react('🇿')
-	}
+//	if(message.content === "A") {
+//		message.react('🇦')
+//	}
+//	if(message.content === "a") {
+//		message.react('🇦')
+//	}
+//	if(message.content === "B") {
+//		message.react('🇧')
+//	}
+//	if(message.content === "b") {
+//		message.react('🇧')
+//	}
+//	if(message.content === "C") {
+//		message.react('🇨')
+//	}
+//	if(message.content === "c") {
+//		message.react('🇨')
+//	}
+//	if(message.content === "D") {
+//		message.react('🇩')
+//	}
+//	if(message.content === "d") {
+//		message.react('🇩')
+//	}
+//	if(message.content === "E") {
+//		message.react('🇪')
+//	}
+//	if(message.content === "e") {
+//		message.react('🇪')
+//	}
+//	if(message.content === "F") {
+//		message.react('🇫')
+//	}
+//	if(message.content === "f") {
+//		message.react('🇫')
+//	}
+//	if(message.content === "G") {
+//		message.react('🇬')
+//	}
+//	if(message.content === "g") {
+//		message.react('🇬')
+//	}
+//	if(message.content === "H") {
+//		message.react('🇭')
+//	}
+//	if(message.content === "h") {
+//		message.react('🇭')
+//	}
+//	if(message.content === "I") {
+//		message.react('🇮')
+//	}
+//	if(message.content === "i") {
+//		message.react('🇮')
+//	}
+//	if(message.content === "J") {
+//		message.react('🇯')
+//	}
+//	if(message.content === "j") {
+//		message.react('🇯')
+//	}
+//	if(message.content === "K") {
+//		message.react('🇰')
+//	}
+//	if(message.content === "k") {
+//		message.react('🇰')
+//	}
+//	if(message.content === "L") {
+//		message.react('🇱')
+//	}
+//	if(message.content === "l") {
+//		message.react('🇱')
+//	}
+//	if(message.content === "M") {
+//		message.react('🇲')
+//	}
+//	if(message.content === "m") {
+//		message.react('🇲')
+//	}
+//	if(message.content === "N") {
+//		message.react('🇳')
+//	}
+//	if(message.content === "n") {
+//		message.react('🇳')
+//	}
+//	if(message.content === "O") {
+//		message.react('🇴')
+//	}
+//	if(message.content === "o") {
+//		message.react('🇴')
+//	}
+//	if(message.content === "P") {
+//		message.react('🇵')
+//	}
+//	if(message.content === "p") {
+//		message.react('🇵')
+//	}
+//	if(message.content === "Q") {
+//		message.react('🇶')
+//	}
+//	if(message.content === "q") {
+//		message.react('🇶')
+//	}
+//	if(message.content === "R") {
+//		message.react('🇷')
+//	}
+//	if(message.content === "r") {
+//		message.react('🇷')
+//	}
+//	if(message.content === "S") {
+//		message.react('🇸')
+//	}
+//	if(message.content === "s") {
+//		message.react('🇸')
+//	}
+//	if(message.content === "T") {
+//		message.react('🇹')
+//	}
+//	if(message.content === "t") {
+//		message.react('🇹')
+//	}
+//	if(message.content === "U") {
+//		message.react('🇺')
+//	}
+//	if(message.content === "u") {
+//		message.react('🇺')
+//	}
+//	if(message.content === "V") {
+//		message.react('🇻')
+//	}
+//	if(message.content === "v") {
+//		message.react('🇻')
+//	}
+//	if(message.content === "W") {
+//		message.react('🇼')
+//	}
+//	if(message.content === "w") {
+//		message.react('🇼')
+//	}
+//	if(message.content === "X") {
+//		message.react('🇽')
+//	}
+//	if(message.content === "x") {
+//		message.react('🇽')
+//	}
+//	if(message.content === "Y") {
+//		message.react('🇾')
+//	}
+//	if(message.content === "y") {
+//		message.react('🇾')
+//	}
+//	if(message.content === "Z") {
+//		message.react('🇿')
+//	}
+//	if(message.content === "z") {
+//		message.react('🇿')
+//	}
     if(message.content === "TAISEZ-VOUS !") {
 		process.exit(1);
     }
