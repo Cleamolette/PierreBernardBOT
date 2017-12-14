@@ -365,7 +365,7 @@ bot.on('message', message => {
 			  {
 				"name": "!info",
 				"value": "Affiche tout un tas d'informations au sujet du bot, dont son utilité"
-			  }
+			  },
 			  {
 				  "name": "!s",
 				  "value": "Affiche un rappel des règles quand au **s**pam"
