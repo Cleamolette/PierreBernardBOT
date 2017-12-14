@@ -345,10 +345,10 @@ bot.on('message', message => {
 		  };
 		  message.channel.send({embed});
 	}
-	if(message.content === "!help") { //Embed !help
+	if(message.content === "!help") { //Embed !helps
 		const embed = {
-			"title": "Commandes",
-			"description": "Liste des commandes *\"publiques\"* disponibles. Peu pour le moment.",
+			"title": "__Commandes__",
+			"description": "Liste des commandes *\"publiques\"* disponibles. Il y en a peu pour le moment.",
 			"color": 12195794,
 			"thumbnail": {
 			  "url": "https://cdn.discordapp.com/emojis/315210423223713802.png"
