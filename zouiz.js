@@ -19,7 +19,7 @@ let s3 = new aws.S3({ //Token Heroku
 
 
 bot.on("ready", () => {
-	bot.user.setGame("!info");
+	bot.user.setGame("^^");
 	//bot.user.setUsername('Pierre Bernard')
 	//bot.user.setAvatar("./Nagui.JPG")
 	console.log("TyelasBOT : Opérationnel ^^");
@@ -27,9 +27,9 @@ bot.on("ready", () => {
 
 bot.on('message', message => {
 	if(message.content.includes("^^")) {
-		message.react('<:this:390917955942219796>')
-		message.react('<:this2:390917955984293889>')
-		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.");
+		message.react(':this:390917955942219796')
+		message.react(':this2:390917955984293889')
+		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.")
 	}
 	if(message.content.includes("😄")) {
 		message.react('😡')
