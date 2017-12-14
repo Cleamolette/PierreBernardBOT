@@ -345,7 +345,7 @@ bot.on('message', message => {
 		  };
 		  message.channel.send({embed});
 	}
-	if(messge.content === "!help") { //Embed !help
+	if(message.content === "!help") { //Embed !help
 		const embed = {
 			"title": "Commandes",
 			"description": "Liste des commandes *\"publiques\"* disponibles. Peu pour le moment.",
