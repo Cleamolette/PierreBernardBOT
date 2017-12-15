@@ -31,14 +31,14 @@ bot.on('message', message => {
 //		message.react(':this2:390917955984293889')
 //		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.")
 //	}
-	if(message.content.includes("😄")) {
-		message.react('😡')
-		console.log("Quelqu'un a osé faire un sourire.")
-	}
-	if(message.content.includes("😛")) {
-		message.react('😡')
-		console.log("Quelqu'un a osé tiré la langue.")
-	}
+//	if(message.content.includes("😄")) {
+//		message.react('😡')
+//		console.log("Quelqu'un a osé faire un sourire.")
+//	}
+//	if(message.content.includes("😛")) {
+//		message.react('😡')
+//		console.log("Quelqu'un a osé tiré la langue.")
+//	}
 	if(message.content.includes("😡")) {
 		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
 		console.log("Quelqu'un est un homme en COLÈRE")
