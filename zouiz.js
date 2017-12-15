@@ -289,7 +289,7 @@ bot.on('message', message => {
     }
     if(message.content === "!info") { //Embed !info
     	const embed = {
-  			"title": "BOT \"Mimiron\" <:Exotica:345609342264803338>",
+  			"title": "BOT \"Mimiron\"",
   			"description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de <@246807099332362240> aussi :eyes:)",
   			"color": 1675721,
   			"footer": {
@@ -311,10 +311,6 @@ bot.on('message', message => {
     		{
      		 "name": "Uptime",
       		"value": "Le bot sera en ligne de 9h du matin à 03h du matin pour votre plus grand bonheur <:blobheart:390132491106779136> Pourquoi ? Parce que le bot a besoin d'être hors-ligne 6 heures par jour."
-    		},
-    		{
-      		"name": "TEDE ! TEDE !",
-      		"value": "MANAWI TEDE ! <:TeteEmploi:390132517421973517>"
     		}
   			]
 		};
@@ -373,7 +369,7 @@ bot.on('message', message => {
 			]
 		  };
 		  message.channel.send({embed});
-	}
+	}	
 });
 
 bot.login(process.env.TOKEN);
