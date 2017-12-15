@@ -70,21 +70,21 @@ bot.on('message', message => {
 	if(message.content === "NAGUI COUCOU") {
 		message.delete(1000)
 	}
-	if(message.content.includes("XD")) {
-		message.react('🇽')
-		message.react('🇩');
-	}
-	if(message.content.includes("xD")) {
-		message.react('🇽')
-		message.react('🇩');
-	}
-	if(message.content.includes("Xd")) {
-		message.react('🇽')
-		message.react('🇩');
-	}
-	//if(message.content.includes("?")) {
-	//	message.react('❓')
-	//}
+//	if(message.content.includes("XD")) {
+//		message.react('🇽')
+//		message.react('🇩');
+//	}
+//	if(message.content.includes("xD")) {
+//		message.react('🇽')
+//		message.react('🇩');
+//	}
+//	if(message.content.includes("Xd")) {
+//		message.react('🇽')
+//		message.react('🇩');
+//	}
+//	if(message.content.includes("?")) {
+//		message.react('❓')
+//	}
 	if(message.content.includes("??")) {
 		message.react('❔')
 		message.react('❓');
