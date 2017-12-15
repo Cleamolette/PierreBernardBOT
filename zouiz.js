@@ -414,7 +414,7 @@ bot.on('message', message => {
 	}
 	if(message.content.includes("<@272416422444007424>")) {
 		message.react(':ThumbsUp:391304799599067146');
-	} 
+	}
 });
 
 bot.login(process.env.TOKEN);
