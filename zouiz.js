@@ -369,7 +369,49 @@ bot.on('message', message => {
 			]
 		  };
 		  message.channel.send({embed});
-	}	
+	}
+	if(message.content === "bouton rouge") {
+		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
+	}
+	if(message.content === "Bouton rouge") {
+		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
+	}
+	if(message.content === "Appuie sur le bouton rouge") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "*Appuie sur le bouton rouge*") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "_Appuie sur le bouton rouge_") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "appuie sur le bouton rouge") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "*appuie sur le bouton rouge*") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "_appuie sur le bouton rouge_") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "Appuyer sur le bouton rouge") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "*Appuyer sur le bouton rouge*") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "_Appuyer sur le bouton rouge_") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "appuyer sur le bouton rouge") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "*appuyer sur le bouton rouge*") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "_appuyer sur le bouton rouge_") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
 });
 
 bot.login(process.env.TOKEN);
