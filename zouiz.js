@@ -412,6 +412,9 @@ bot.on('message', message => {
 	if(message.content === "_appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 	}
+	if(message.content.includes("<@272416422444007424>")) {
+		message.react('<:ThumbsUp:391304799599067146>');
+	}
 });
 
 bot.login(process.env.TOKEN);
