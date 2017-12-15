@@ -26,11 +26,11 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message => {
-	if(message.content.includes("^^")) {
-		message.react(':this:390917955942219796')
-		message.react(':this2:390917955984293889')
-		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.")
-	}
+//	if(message.content.includes("^^")) {
+//		message.react(':this:390917955942219796')
+//		message.react(':this2:390917955984293889')
+//		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.")
+//	}
 	if(message.content.includes("😄")) {
 		message.react('😡')
 		console.log("Quelqu'un a osé faire un sourire.")
@@ -385,6 +385,15 @@ bot.on('message', message => {
 	if(message.content === "_Appuie sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 	}
+	if(message.content === "appuie sur le bouton rouge") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "*appuie sur le bouton rouge*") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "_appuie sur le bouton rouge_") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
 	if(message.content === "Appuyer sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 	}
@@ -394,6 +403,15 @@ bot.on('message', message => {
 	if(message.content === "_Appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 	}
+	if(message.content === "appuyer sur le bouton rouge") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "*appuyer sur le bouton rouge*") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
+	if(message.content === "_appuyer sur le bouton rouge_") {
+		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	}
 });
 
-bot.login(process.env.TOKEN); 
+bot.login(process.env.TOKEN);
