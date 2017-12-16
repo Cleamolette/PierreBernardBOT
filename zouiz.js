@@ -1,3 +1,5 @@
+import { Guild } from 'discord.js';
+
 const express = require('express') //Port app Heroku
 const path = require('path') //Port app Heroku
 const PORT = process.env.PORT || 5000 //Port app Heroku
@@ -26,8 +28,10 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message => {
-	var content = message.content
-	bot.channels.get("391601508158013440").send(content);
+	if(Guild.name === "KirinTor RP Universe") {
+		var content = message.content
+		bot.channels.get("391601508158013440").send("`Nouveau message`: ", content);
+	}
 });
 
 bot.on('message', message => {
