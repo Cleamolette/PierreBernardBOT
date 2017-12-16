@@ -40,12 +40,12 @@ bot.on('message', message => {
 //		console.log("Quelqu'un a osé tiré la langue.")
 //	}
 	if(message.content.includes("😡")) {
-		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
+		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5 😡")
 		console.log("Quelqu'un est un homme en COLÈRE")
 		bot.channels.get("391601508158013440").send(">> Commande ``Homme en colère``")
 	}
-	if(message.content === "JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5") {
-		message.delete(800);
+	if(message.content === "JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5 😡") {
+		message.delete(1000);
 	}
 	if(message.content === "*Hello darkness my old friend*") {
 		message.channel.send("TG Huro")
