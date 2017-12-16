@@ -26,13 +26,6 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message => {
-	if(Guild.id === "388123958907633666") {
-		var content = message.content
-		bot.channels.get("391601508158013440").send("`Nouveau message`: ", content);
-	}
-});
-
-bot.on('message', message => {
 //	if(message.content.includes("^^")) {
 //		message.react(':this:390917955942219796')
 //		message.react(':this2:390917955984293889')
