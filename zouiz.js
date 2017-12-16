@@ -329,7 +329,7 @@ bot.on('message', message => {
 		message.channel.send('Ping du bot en cours...').then(sent => {
 			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
 		});
-		var date = new Date(message.createdTimestamp*1000);
+		var date = new Date()
 		bot.channels.get("391601508158013440").send(`${date} >> Commande !ping`)
 	}
 	if(message.content === "!spam") { //Embed !spam
