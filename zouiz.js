@@ -26,6 +26,11 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message => {
+	var content = msg.content
+	bot.channels.get("391601508158013440").send(content);
+});
+
+bot.on('message', message => {
 //	if(message.content.includes("^^")) {
 //		message.react(':this:390917955942219796')
 //		message.react(':this2:390917955984293889')
