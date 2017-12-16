@@ -427,7 +427,7 @@ bot.on('message', message => {
 		  message.reply({embed});
 	}
 	if(message.content === "c'est un test bouritadaco") {
-		bot.channels.get("388844665111183360").send("tonté crétin d'âne pouta les ogres c'est comme les couilles")
+		bot.channels.get("391601508158013440").send("tonté crétin d'âne pouta les ogres c'est comme les couilles")
 	}
 });
 
