@@ -23,7 +23,6 @@ bot.on("ready", () => {
 	//bot.user.setUsername('Mimiron')
 	//bot.user.setAvatar("./Mimiron.jpg")
 	console.log("TyelasBOT : Opérationnel ^^");
-	bot.channels.get("391601508158013440").send(">> **Bot en ligne**")
 });
 
 bot.on('message', message => {
