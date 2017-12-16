@@ -1,5 +1,3 @@
-import { Guild } from 'discord.js';
-
 const express = require('express') //Port app Heroku
 const path = require('path') //Port app Heroku
 const PORT = process.env.PORT || 5000 //Port app Heroku
@@ -25,6 +23,13 @@ bot.on("ready", () => {
 	//bot.user.setUsername('Mimiron')
 	//bot.user.setAvatar("./Mimiron.jpg")
 	console.log("TyelasBOT : Opérationnel ^^");
+});
+
+bot.on('message', message => {
+	if(Guild.id === "388123958907633666") {
+		var content = message.content
+		bot.channels.get("391601508158013440").send("`Nouveau message`: ", content);
+	}
 });
 
 bot.on('message', message => {
