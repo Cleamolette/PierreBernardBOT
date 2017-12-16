@@ -331,7 +331,7 @@ bot.on('message', message => {
 			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
 		});
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(date, "``(GMT+0) >> Commande !ping``")
+		bot.channels.get("391601508158013440").send(date,"``(GMT+0) >> Commande !ping``")
 	}
 	if(message.content === "!spam") { //Embed !spam
 		const embed = {
