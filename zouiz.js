@@ -23,6 +23,7 @@ bot.on("ready", () => {
 	//bot.user.setUsername('Mimiron')
 	//bot.user.setAvatar("./Mimiron.jpg")
 	console.log("TyelasBOT : Opérationnel ^^");
+	bot.channels.get("391601508158013440").send(">> **Bot en ligne**")
 });
 
 bot.on('message', message => {
@@ -66,11 +67,11 @@ bot.on('message', message => {
 	if(message.content === "TG Huro") {
 		message.delete(300)
 	}
-	if(message.content.includes("Nagui")) {
+	if(message.content === "Nagui") {
 		message.channel.send("NAGUI COUCOU")
 		bot.channels.get("391601508158013440").send(">> Commande ``Nagui``")
 	}
-	if(message.content.includes("nagui")) {
+	if(message.content === "nagui") {
 		message.channel.send("NAGUI COUCOU")
 		bot.channels.get("391601508158013440").send(">> Commande ``nagui``")
 	}
