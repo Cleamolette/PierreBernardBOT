@@ -26,7 +26,7 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message => {
-	var content = msg.content
+	var content = message.content
 	bot.channels.get("391601508158013440").send(content);
 });
 
