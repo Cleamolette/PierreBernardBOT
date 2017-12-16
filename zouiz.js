@@ -424,7 +424,7 @@ bot.on('message', message => {
 			  "url": "https://cdn.discordapp.com/avatars/356065937318871041/58bd0ecfce3f3b90ef4cedd440e2ce5d.png"
 			}
 		  };
-		  message.channel.send({embed});
+		  message.reply({embed});
 	}
 });
 
