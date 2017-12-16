@@ -42,30 +42,37 @@ bot.on('message', message => {
 	if(message.content.includes("😡")) {
 		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
 		console.log("Quelqu'un est un homme en COLÈRE")
+		bot.channels.get("391601508158013440").send(">> Commande ``Homme en colère``")
 	}
 	if(message.content === "JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5") {
 		message.delete(800);
 	}
 	if(message.content === "*Hello darkness my old friend*") {
 		message.channel.send("TG Huro")
+		bot.channels.get("391601508158013440").send(">> Commande ``*Hello darkness my old friend*``")
 	}
 	if(message.content === "*Hello darkness my old friends*") {
 		message.channel.send("TG Huro")
+		bot.channels.get("391601508158013440").send(">> Commande ``*Hello darkness my old friends*``")
 	}
 	if(message.content === "_Hello darkness my old friend_") {
 		message.channel.send("TG Huro")
+		bot.channels.get("391601508158013440").send(">> Commande ``_Hello darkness my old friend_``")
 	}
 	if(message.content === "_Hello darkness my old friends_") {
 		message.channel.send("TG Huro")
+		bot.channels.get("391601508158013440").send(">> Commande ``_Hello darkness my old friends_``")
 	}
 	if(message.content === "TG Huro") {
 		message.delete(300)
 	}
 	if(message.content.includes("Nagui")) {
 		message.channel.send("NAGUI COUCOU")
+		bot.channels.get("391601508158013440").send(">> Commande ``Nagui``")
 	}
 	if(message.content.includes("nagui")) {
 		message.channel.send("NAGUI COUCOU")
+		bot.channels.get("391601508158013440").send(">> Commande ``nagui``")
 	}
 	if(message.content === "NAGUI COUCOU") {
 		message.delete(1000)
@@ -315,11 +322,14 @@ bot.on('message', message => {
   			]
 		};
 		message.channel.send({embed});
+		bot.channels.get("391601508158013440").send(">> Commande ``!info``")
+		
 	}
 	if(message.content === "!ping") { //Commande !ping
 		message.channel.send('Ping du bot en cours...').then(sent => {
 			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
 		});
+		bot.channels.get("391601508158013440").send(">> Commande ``!ping``")
 	}
 	if(message.content === "!spam") { //Embed !spam
 		const embed = {
@@ -340,6 +350,7 @@ bot.on('message', message => {
 			]
 		  };
 		  message.channel.send({embed});
+		  bot.channels.get("391601508158013440").send(">> Commande ``!spam``")
 	}
 	if(message.content === "!help") { //Embed !help
 		const embed = {
@@ -369,51 +380,67 @@ bot.on('message', message => {
 			]
 		  };
 		  message.channel.send({embed});
+		  bot.channels.get("391601508158013440").send(">> Commande ``!help``")
 	}
 	if(message.content === "bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
+		bot.channels.get("391601508158013440").send(">> Commande ``bouton rouge``")
 	}
 	if(message.content === "Bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
+		bot.channels.get("391601508158013440").send(">> Commande ``Bouton rouge``")
 	}
 	if(message.content === "Appuie sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``Appuie sur le bouton rouge``")
 	}
 	if(message.content === "*Appuie sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``*Appuie sur le bouton rouge*``")
 	}
 	if(message.content === "_Appuie sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``_Appuie sur le bouton rouge_``")
 	}
 	if(message.content === "appuie sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``appuie sur le bouton rouge``")
 	}
 	if(message.content === "*appuie sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``*appuie sur le bouton rouge*``")
 	}
 	if(message.content === "_appuie sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``_appuie sur le bouton rouge_``")
 	}
 	if(message.content === "Appuyer sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``Appuyer sur le bouton rouge``")
 	}
 	if(message.content === "*Appuyer sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``*Appuyer sur le bouton rouge*``")
 	}
 	if(message.content === "_Appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``_Appuyer sur le bouton rouge_``")
 	}
 	if(message.content === "appuyer sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``appuyer sur le bouton rouge``")
 	}
 	if(message.content === "*appuyer sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``*appuyer sur le bouton rouge*``")
 	}
 	if(message.content === "_appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+		bot.channels.get("391601508158013440").send(">> Commande ``_appuyer sur le bouton rouge_``")
 	}
 	if(message.content.includes("<@272416422444007424>")) {
-		message.react(':ThumbsUp:391304799599067146');
+		message.react(':ThumbsUp:391304799599067146')
+		bot.channels.get("391601508158013440").send(">> Commande ``@Mimiron``")
 	}
 	if(message.content === "!aki start") {
 		const embed = {
@@ -425,6 +452,7 @@ bot.on('message', message => {
 			}
 		  };
 		  message.reply({embed});
+		  bot.channels.get("391601508158013440").send(">> Commande ``!aki start``")
 	}
 	if(message.content === "c'est un test bouritadaco") {
 		bot.channels.get("391601508158013440").send("tonté crétin d'âne pouta les ogres c'est comme les couilles")
