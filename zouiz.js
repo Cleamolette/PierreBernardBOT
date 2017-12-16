@@ -28,7 +28,7 @@ bot.on("ready", () => {
 });
 
 bot.on('message', message => {
-	if(Guild.name === "KirinTor RP Universe") {
+	if(Guild.id("388123958907633666")) {
 		var content = message.content
 		bot.channels.get("391601508158013440").send("`Nouveau message`: ", content);
 	}
