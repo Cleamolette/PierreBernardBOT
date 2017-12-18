@@ -353,7 +353,7 @@ bot.on('message', message => {
 		  };
 		  message.channel.send({embed});
 		  var date = new Date().toLocaleTimeString()
-		  bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``!spam```)
+		  bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !spam`)
 	}
 	if(message.content === "!help") { //Embed !help
 		const embed = {
@@ -384,82 +384,82 @@ bot.on('message', message => {
 		  };
 		  message.channel.send({embed});
 		  var date = new Date().toLocaleTimeString()
-		  bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``!help```)
+		  bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !help`)
 	}
 	if(message.content === "bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``bouton rouge```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande bouton rouge`)
 	}
 	if(message.content === "Bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``Bouton rouge```)
+		bot.channels.get("391601508158013440").send(`{date}(GMT+0) >> Commande Bouton rouge`)
 	}
 	if(message.content === "Appuie sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``Appuie sur le bouton rouge```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Appuie sur le bouton rouge`)
 	}
 	if(message.content === "*Appuie sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``*Appuie sur le bouton rouge*```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Appuie sur le bouton rouge*`)
 	}
 	if(message.content === "_Appuie sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``_Appuie sur le bouton rouge_```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Appuie sur le bouton rouge_`)
 	}
 	if(message.content === "appuie sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``appuie sur le bouton rouge```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande appuie sur le bouton rouge`)
 	}
 	if(message.content === "*appuie sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``*appuie sur le bouton rouge*```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *appuie sur le bouton rouge*`)
 	}
 	if(message.content === "_appuie sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``_appuie sur le bouton rouge_```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _appuie sur le bouton rouge_`)
 	}
 	if(message.content === "Appuyer sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``Appuyer sur le bouton rouge```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Appuyer sur le bouton rouge`)
 	}
 	if(message.content === "*Appuyer sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``*Appuyer sur le bouton rouge*```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Appuyer sur le bouton rouge*`)
 	}
 	if(message.content === "_Appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``_Appuyer sur le bouton rouge_```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Appuyer sur le bouton rouge_`)
 	}
 	if(message.content === "appuyer sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``appuyer sur le bouton rouge```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande appuyer sur le bouton rouge`)
 	}
 	if(message.content === "*appuyer sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``*appuyer sur le bouton rouge*```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *appuyer sur le bouton rouge*`)
 	}
 	if(message.content === "_appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``_appuyer sur le bouton rouge_```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _appuyer sur le bouton rouge_`)
 	}
 	if(message.content.includes("<@272416422444007424>")) {
 		message.react(':ThumbsUp:391304799599067146')
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``@Mimiron```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande @Mimiron`)
 	}
 	if(message.content === "!aki start") {
 		const embed = {
@@ -472,11 +472,11 @@ bot.on('message', message => {
 		  };
 		  message.reply({embed});
 		  var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``!aki start```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !aki start`)
 	}
 	if(message.content === "c'est un test bouritadaco") {
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``tonté crétin d'âne pouta les ogres c'est comme les couilles```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande tonté crétin d'âne pouta les ogres c'est comme les couilles`)
 	}
 });
 
