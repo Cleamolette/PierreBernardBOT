@@ -323,7 +323,7 @@ bot.on('message', message => {
 		};
 		message.channel.send({embed});
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(```${date}``(GMT+0) >> Commande ``!info```)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !info`)
 		
 	}
 	if(message.content === "!ping") { //Commande !ping
@@ -331,7 +331,7 @@ bot.on('message', message => {
 			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
 		});
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`\`\`${date}(GMT+0)\`\` >> Commande \`\`!ping\`\``)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !ping`)
 	}
 	if(message.content === "!spam") { //Embed !spam
 		const embed = {
