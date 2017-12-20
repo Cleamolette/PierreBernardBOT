@@ -42,37 +42,37 @@ bot.on('message', message => {
 	if(message.content.includes("😡")) {
 		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
 		console.log("Quelqu'un est un homme en COLÈRE")
-		bot.channels.get("391601508158013440").send(">> Commande ``Homme en colère``")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Homme en colère`)
 	}
 	if(message.content === "JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5") {
 		message.delete(1000);
 	}
 	if(message.content === "*Hello darkness my old friend*") {
 		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(">> Commande ``*Hello darkness my old friend*``")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Hello darkness my old friend*`)
 	}
 	if(message.content === "*Hello darkness my old friends*") {
 		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(">> Commande ``*Hello darkness my old friends*``")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Hello darkness my old friends*`)
 	}
 	if(message.content === "_Hello darkness my old friend_") {
 		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(">> Commande ``_Hello darkness my old friend_``")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Hello darkness my old friend_`)
 	}
 	if(message.content === "_Hello darkness my old friends_") {
 		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(">> Commande ``_Hello darkness my old friends_``")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Hello darkness my old friends_`)
 	}
 	if(message.content === "TG Huro") {
 		message.delete(300)
 	}
 	if(message.content === "Nagui") {
 		message.channel.send("NAGUI COUCOU")
-		bot.channels.get("391601508158013440").send(">> Commande ``Nagui``")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Nagui`)
 	}
 	if(message.content === "nagui") {
 		message.channel.send("NAGUI COUCOU")
-		bot.channels.get("391601508158013440").send(">> Commande ``nagui``")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande nagui`)
 	}
 	if(message.content === "NAGUI COUCOU") {
 		message.delete(1000)
@@ -394,7 +394,7 @@ bot.on('message', message => {
 	if(message.content === "Bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`{date}(GMT+0) >> Commande Bouton rouge`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Bouton rouge`)
 	}
 	if(message.content === "Appuie sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
@@ -474,9 +474,10 @@ bot.on('message', message => {
 		  var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !aki start`)
 	}
-	if(message.content === "c'est un test bouritadaco") {
-		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande tonté crétin d'âne pouta les ogres c'est comme les couilles`)
+	if(message.content === "!addrole") {
+		let member = message.member;
+		member.addRole(role).catch(console.error);
+		member.removeRole(role).catch(console.error);
 	}
 });
 
