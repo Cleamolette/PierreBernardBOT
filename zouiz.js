@@ -479,42 +479,42 @@ bot.on('message', message => {
 		let member = message.member;
 		member.addRole(role).catch(console.error);
 		message.channel.send("``Rôle ajouté`` :white_check_mark:")
-		message.delete(5000)
+		message.delete(6000)
 	}
 	if(message.content === "!role- Garde de Hurlevent") {
 		let role = message.guild.roles.find("name", "La Garde de Hurlevent");
 		let member = message.member;
 		member.removeRole(role).catch(console.error);
 		message.channel.send("``Rôle retiré`` :white_check_mark:")
-		message.delete(5000)
+		message.delete(6000)
 	}
 	if(message.content === "!role+ Crocs de Wrynn") {
 		let role = message.guild.roles.find("name", "Crocs de Wrynn");
 		let member = message.member;
 		member.addRole(role).catch(console.error);
 		message.channel.send("``Rôle ajouté`` :white_check_mark:")
-		message.delete(5000)
+		message.delete(6000)
 	}
 	if(message.content === "!role- Crocs de Wrynn") {
 		let role = message.guild.roles.find("name", "Crocs de Wrynn");
 		let member = message.member;
 		member.removeRole(role).catch(console.error);
 		message.channel.send("``Rôle retiré`` :white_check_mark:")
-		message.delete(5000)
+		message.delete(6000)
 	}
 	if(message.content === "!role+ Main de Lordaeron") {
 		let role = message.guild.roles.find("name", "Main de Lordaeron");
 		let member = message.member;
 		member.addRole(role).catch(console.error);
 		message.channel.send("``Rôle ajouté`` :white_check_mark:")
-		message.delete(5000)
+		message.delete(6000)
 	}
 	if(message.content === "!role- Main de Lordaeron") {
 		let role = message.guild.roles.find("name", "Main de Lordaeron");
 		let member = message.member;
 		member.removeRole(role).catch(console.error);
 		message.channel.send("``Rôle retiré`` :white_check_mark:")
-		message.delete(5000)
+		message.delete(6000)
 	}
 	if(message.content === "!rolelist") {
 		const embed = {
@@ -548,9 +548,9 @@ bot.on('message', message => {
 	if(message.content === "!changelog") {
 		const embed = {
 			"title": "Changelog / Nouveautés",
-			"description": "Mimiron BOT **v1.161**",
+			"description": "Mimiron BOT **v1.162**",
 			"color": 5560853,
-			"timestamp": "2017-12-20T20:19:00.000Z",
+			"timestamp": "2017-12-20T20:23:00.000Z",
 			"footer": {
 			  "text": "Dernière mise à jour le"
 			},
@@ -573,6 +573,12 @@ bot.on('message', message => {
 			]
 		  };
 		  message.channel.send({embed});
+	}
+	if(message.content === "``Rôle ajouté`` :white_check_mark:") {
+		message.delete(5000)
+	}
+	if(message.content === "``Rôle retiré`` :white_check_mark:") {
+		message.delete(5000)
 	}
 });
 
