@@ -474,10 +474,34 @@ bot.on('message', message => {
 		  var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !aki start`)
 	}
-	if(message.content === "!addrole") {
-		let role = message.guild.roles.find("name", "Rôliste");
+	if(message.content === "!role+ Garde de Hurlevent") {
+		let role = message.guild.roles.find("name", "La Garde de Hurlevent");
 		let member = message.member;
 		member.addRole(role).catch(console.error);
+	}
+	if(message.content === "!role- Garde de Hurlevent") {
+		let role = message.guild.roles.find("name", "La Garde de Hurlevent");
+		let member = message.member;
+		member.removeRole(role).catch(console.error);
+	}
+	if(message.content === "!role+ Crocs de Wrynn") {
+		let role = message.guild.roles.find("name", "Crocs de Wrynn");
+		let member = message.member;
+		member.addRole(role).catch(console.error);
+	}
+	if(message.content === "!role- Crocs de Wrynn") {
+		let role = message.guild.roles.find("name", "Crocs de Wrynn");
+		let member = message.member;
+		member.removeRole(role).catch(console.error);
+	}
+	if(message.content === "!role+ Main de Lordaeron") {
+		let role = message.guild.roles.find("name", "Main de Lordaeron");
+		let member = message.member;
+		member.addRole(role).catch(console.error);
+	}
+	if(message.content === "!role- Main de Lordaeron") {
+		let role = message.guild.roles.find("name", "Main de Lordaeron");
+		let member = message.member;
 		member.removeRole(role).catch(console.error);
 	}
 });
