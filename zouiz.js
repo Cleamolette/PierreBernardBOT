@@ -475,6 +475,7 @@ bot.on('message', message => {
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !aki start`)
 	}
 	if(message.content === "!addrole") {
+		let role = message.guilds.role.find("name", "Rôliste");
 		let member = message.member;
 		member.addRole(role).catch(console.error);
 		member.removeRole(role).catch(console.error);
