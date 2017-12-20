@@ -533,6 +533,35 @@ bot.on('message', message => {
 		  };
 		  message.channel.send({embed});
 	}
+	if(message.content === "!changelog") {
+		const embed = {
+			"title": "Changelog / Nouveautés",
+			"description": "Mimiron BOT **v1.158**",
+			"color": 5560853,
+			"timestamp": "2017-12-20T19:42:00.000Z",
+			"footer": {
+			  "text": "Dernière mise à jour le"
+			},
+			"thumbnail": {
+			  "url": "https://cdn.discordapp.com/avatars/272416422444007424/c5f309543416a382339859addb4af97e.png"
+			},
+			"fields": [
+			  {
+				"name": "!role+ & !role-",
+				"value": "Permet d'ajouter un rôle correspondant à votre guilde"
+			  },
+			  {
+				"name": "!rolelist",
+				"value": "Affiche la liste des rôles disponibles"
+			  },
+			  {
+				"name": "!changelog",
+				"value": "Affiche cette commande, qui rend compte des dernières nouveautés du bot <:blobcheer:384485467665727488>"
+			  }
+			]
+		  };
+		  message.channel.send({embed});
+	}
 });
 
 bot.login(process.env.TOKEN);
