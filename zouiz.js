@@ -526,7 +526,7 @@ bot.on('message', message => {
 				"value": "``!role+ Main de Lordaeron`` ou ``!role- Main de Lordaeron``"
 			  },
 			  {
-				"name": "<:attention:314418019130671106> ATTENTION ! <:attention:314418019130671106>",
+				"name": "<:attention:393127478799106061> ATTENTION ! <:attention:393127478799106061>",
 				"value": "Tout membre retrouvé avec un grade ne lui appartenant pas subira des sanctions de la part du Conseil des neuf."
 			  }
 			]
@@ -536,9 +536,9 @@ bot.on('message', message => {
 	if(message.content === "!changelog") {
 		const embed = {
 			"title": "Changelog / Nouveautés",
-			"description": "Mimiron BOT **v1.158**",
+			"description": "Mimiron BOT **v1.159**",
 			"color": 5560853,
-			"timestamp": "2017-12-20T19:42:00.000Z",
+			"timestamp": "2017-12-20T19:50:00.000Z",
 			"footer": {
 			  "text": "Dernière mise à jour le"
 			},
@@ -556,7 +556,7 @@ bot.on('message', message => {
 			  },
 			  {
 				"name": "!changelog",
-				"value": "Affiche cette commande, qui rend compte des dernières nouveautés du bot <:blobcheer:384485467665727488>"
+				"value": "Affiche cette commande, qui rend compte des dernières nouveautés du bot <:blobcheer:393127479470063616>"
 			  }
 			]
 		  };
