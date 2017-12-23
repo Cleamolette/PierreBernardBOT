@@ -548,9 +548,9 @@ bot.on('message', message => {
 	if(message.content === "!changelog") {
 		const embed = {
 			"title": "Changelog / Nouveautés",
-			"description": "Mimiron BOT **v1.162**",
+			"description": "Mimiron BOT **v1.164**",
 			"color": 5560853,
-			"timestamp": "2017-12-20T20:23:00.000Z",
+			"timestamp": "2017-12-23T16:22:00.000Z",
 			"footer": {
 			  "text": "Dernière mise à jour le"
 			},
