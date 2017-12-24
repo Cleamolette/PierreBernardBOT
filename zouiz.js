@@ -19,24 +19,37 @@ let s3 = new aws.S3({ //Token Heroku
 	secretAccessKey: process.env.TOKEN
 });
 
-bot.on('message', message => { 
-	if (message.author.bot) return;
-	if(message.content.indexOf(config.prefix) !== 0) return;
-	const args = message.content.slice(config.prefix.length).trim().split(/ +g/);
-	const command = args.shift().toLowerCase();
-	try {
-		let commandFile = require (`./commands/${command}.js`);
-		commandFile.run(bot, message, args);
-	} catch (err) {
-		console.error(err);
-	}
-});
 
-exports.run = (bot, message, args) => {
-    if(!args || args.size < 1) return message.reply("Un nom de commande doit être spécifié.");
-    delete require.cache[require.resolve(`./${args[0]}.js`)];
-    message.reply(`La commande ${args[0]} a été rechargée !`);
-;}
+function loadCmds () {
+	fs.readdir('./commands/', (err, files) => {
+		if(err) console.error(err);
+		var jsfiles = files.filter(f => f.split('.').pop() === '.js');
+		if (jsfiles.length <= 0) { return console.log('Aucune commande trouvée...')}
+		else { console.log(jsfiles.length + ' commandes trouvées') }
+		jsfiles.forEach((f, i) => {
+			delete require.cache[require.resolve(`./commands/${f}`)];
+			var cmds = require(`./commands/${f}`);
+			console.log(`Commande ${f} en chargement...`);
+			bot.commands.set(cmds.config.command, cmds);
+		})
+	})
+}
+
+loadCmds();
+bot.on('message', message => {
+	var sender = message.author;
+	var msg = message.content.toUpperCase();
+	var prefix = '!'
+	var cont = message.content.slice(prefix.length).split(" ");
+	var args = cont.slice(1);
+	if(!message.content.startsWith(prefix)) return;
+	var cmd = bot.commands.get(cont[0])
+	if (cmd) cmd.run(bot, message, args);
+	if (msg === prefix + 'RELOAD') {
+		message.channel.send({embed:{description:"Toutes les commandes ont été rechargées"}})
+		loadCmds()
+	}
+})
 
 bot.on("ready", () => {
 	bot.user.setGame("!info");
