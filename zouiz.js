@@ -20,34 +20,27 @@ let s3 = new aws.S3({ //Token Heroku
 });
 
 
-function loadCmds () {
-	fs.readdir('./commands/', (err, files) => {
-		if(err) console.error(err);
-		var jsfiles = files.filter(f => f.split('.').pop() === '.js');
-		if (jsfiles.length <= 0) { return console.log('Aucune commande trouvée...')}
-		else { console.log(jsfiles.length + ' commandes trouvées') }
-		jsfiles.forEach((f, i) => {
-			delete require.cache[require.resolve(`./commands/${f}`)];
-			var cmds = require(`./commands/${f}`);
-			console.log(`Commande ${f} en chargement...`);
-			bot.commands.set(cmds.config.command, cmds);
-		})
-	})
-}
+fs.readdir("./commands/", (err, files) => {
+	if (err) return console.error(err);
+	files.forEach(file => {
+	  let eventFunction = require(`./commands/${file}`);
+	  let eventName = file.split(".")[0];
+	  client.on(eventName, (...args) => eventFunction.run(client, ...args));
+	});
+ });
 
-//loadCmds();
-//bot.on('message', message => {
-//	var sender = message.author;
-//	var msg = message.content.toUpperCase();
-//	var prefix = '!'
-//	var cont = message.content.slice(prefix.length).split(" ");
-//	var args = cont.slice(1);
-//	if(!message.content.startsWith(prefix)) return;
-//	if (msg === prefix + 'RELOAD') {
-//		message.channel.send({embed:{description:"Toutes les commandes ont été rechargées"}})
-//		loadCmds()
-//	}
-//})
+bot.on('message', message => {
+	if (message.author.bot) return;
+  	if(message.content.indexOf(config.prefix) !== 0) return;
+  	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  	const command = args.shift().toLowerCase();
+  	try {
+    	let commandFile = require(`./commands/${command}.js`);
+    	commandFile.run(client, message, args);
+  	} catch (err) {
+    	console.error(err);
+  }
+});
 
 bot.on("ready", () => {
 	bot.user.setGame("!info");

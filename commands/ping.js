@@ -5,7 +5,3 @@ module.exports.run = async (bot, message, args) => {
     var date = new Date().toLocaleTimeString()
     bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !ping`)
 }
-
-module.exports.config = {
-    command: "ping"
-}
