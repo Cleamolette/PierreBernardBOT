@@ -9,6 +9,7 @@ express() //Port app Heroku
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 const Discord = require("discord.js");
+const test = require("\test.js")
 const bot = new Discord.Client();
 const aws = require('aws-sdk'); //Token Heroku
 
