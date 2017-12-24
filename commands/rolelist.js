@@ -28,6 +28,10 @@ module.exports.run = async (bot, message, args) => {
             "value": "``!role+ Maison Coeur de Lion`` ou ``!role- Maison Coeur de Lion``"
           },
           {
+            "name": "Rempart du Roi",
+            "value": "``!role- Rempart du Roi`` ou ``!role+ Rempart du Roi``"
+          },
+          {
             "name": "<:attention:393127478799106061> ATTENTION ! <:attention:393127478799106061>",
             "value": "Tout membre retrouvé avec un grade ne lui appartenant pas subira des sanctions de la part du Conseil des neuf."
           }
