@@ -35,19 +35,19 @@ function loadCmds () {
 	})
 }
 
-loadCmds();
-bot.on('message', message => {
-	var sender = message.author;
-	var msg = message.content.toUpperCase();
-	var prefix = '!'
-	var cont = message.content.slice(prefix.length).split(" ");
-	var args = cont.slice(1);
-	if(!message.content.startsWith(prefix)) return;
-	if (msg === prefix + 'RELOAD') {
-		message.channel.send({embed:{description:"Toutes les commandes ont été rechargées"}})
-		loadCmds()
-	}
-})
+//loadCmds();
+//bot.on('message', message => {
+//	var sender = message.author;
+//	var msg = message.content.toUpperCase();
+//	var prefix = '!'
+//	var cont = message.content.slice(prefix.length).split(" ");
+//	var args = cont.slice(1);
+//	if(!message.content.startsWith(prefix)) return;
+//	if (msg === prefix + 'RELOAD') {
+//		message.channel.send({embed:{description:"Toutes les commandes ont été rechargées"}})
+//		loadCmds()
+//	}
+//})
 
 bot.on("ready", () => {
 	bot.user.setGame("!info");
@@ -355,14 +355,6 @@ bot.on('message', message => {
 		message.channel.send({embed});
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !info`)
-		
-	}
-	if(message.content === "!ping") { //Commande !ping
-		message.channel.send('Ping du bot en cours...').then(sent => {
-			sent.edit(`**Ping :** \`${sent.createdTimestamp - message.createdTimestamp} ms\``);
-		});
-		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !ping`)
 	}
 	if(message.content === "!spam") { //Embed !spam
 		const embed = {
