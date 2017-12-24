@@ -20,6 +20,14 @@ module.exports.run = async (bot, message, args) => {
             "value": "``!role+ Main de Lordaeron`` ou ``!role- Main de Lordaeron``"
           },
           {
+            "name": "Escadron Loups-de-guerre",
+            "value": "``!role+ Escadron Loups-de-guerre`` ou ``!role- Escadron Loups-de-guerre``"
+          },
+          {
+            "name": "Maison Coeur de Lion",
+            "value": "``!role+ Maison Coeur de Lion`` ou ``!role- Maison Coeur de Lion``"
+          },
+          {
             "name": "<:attention:393127478799106061> ATTENTION ! <:attention:393127478799106061>",
             "value": "Tout membre retrouvé avec un grade ne lui appartenant pas subira des sanctions de la part du Conseil des neuf."
           }

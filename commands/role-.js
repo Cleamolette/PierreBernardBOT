@@ -20,4 +20,18 @@ if(message.content === "!role- Main de Lordaeron") {
     message.channel.send("``Rôle retiré`` :white_check_mark:")
     message.delete(6000)
 }
+if(message.content === "!role- Escadron Loups-de-guerre") {
+    let role = message.guild.roles.find("name", "🐺 Escadron Loups-de-guerre");
+    let member = message.member;
+    member.addRole(role).catch(console.error);
+    message.channel.send("``Rôle retiré`` :white_check_mark:")
+    message.delete(6000)
+}
+if(message.content === "!role- Maison Coeur de Lion") {
+    let role = message.guild.roles.find("name", "🐅 Maison Cœur de Lion");
+    let member = message.member;
+    member.addRole(role).catch(console.error);
+    message.channel.send("``Rôle retiré`` :white_check_mark:")
+    message.delete(6000)
+}
 }
