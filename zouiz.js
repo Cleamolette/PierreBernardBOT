@@ -35,7 +35,7 @@ bot.on('message', message => {
 	const command = args.shift().toLowerCase();
 	try {
 		let commandFile = require (`./commands/${command}.js`);
-		commandFile.run(client, message, args);
+		commandFile.run(bot, message, args);
 	} catch (err) {
 		console.error(err);
 	}
