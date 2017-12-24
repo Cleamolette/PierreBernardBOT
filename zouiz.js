@@ -1,6 +1,11 @@
 const express = require('express') //Port app Heroku
 const path = require('path') //Port app Heroku
 const PORT = process.env.PORT || 5000 //Port app Heroku
+const aws = require('aws-sdk'); //Token Heroku
+const Discord = require("discord.js");
+const fs = require("fs");
+const bot = new Discord.Client();
+const config = require("./config.json");
 
 express() //Port app Heroku
   .use(express.static(path.join(__dirname, 'public')))
@@ -8,17 +13,10 @@ express() //Port app Heroku
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-const Discord = require("discord.js");
-const fs = require("fs");
-const bot = new Discord.Client();
-const config = require("./config.json");
-const aws = require('aws-sdk'); //Token Heroku
-
 let s3 = new aws.S3({ //Token Heroku
 	accessKeyId: process.env.S3_KEY,
 	secretAccessKey: process.env.TOKEN
 });
-
 
 fs.readdir("./commands/", (err, files) => {
 	if (err) return console.error(err);
@@ -405,48 +403,6 @@ bot.on('message', message => {
 		  message.reply({embed});
 		  var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !aki start`)
-	}
-	if(message.content === "!role+ Garde de Hurlevent") {
-		let role = message.guild.roles.find("name", "La Garde de Hurlevent");
-		let member = message.member;
-		member.addRole(role).catch(console.error);
-		message.channel.send("``Rôle ajouté`` :white_check_mark:")
-		message.delete(6000)
-	}
-	if(message.content === "!role- Garde de Hurlevent") {
-		let role = message.guild.roles.find("name", "La Garde de Hurlevent");
-		let member = message.member;
-		member.removeRole(role).catch(console.error);
-		message.channel.send("``Rôle retiré`` :white_check_mark:")
-		message.delete(6000)
-	}
-	if(message.content === "!role+ Crocs de Wrynn") {
-		let role = message.guild.roles.find("name", "Crocs de Wrynn");
-		let member = message.member;
-		member.addRole(role).catch(console.error);
-		message.channel.send("``Rôle ajouté`` :white_check_mark:")
-		message.delete(6000)
-	}
-	if(message.content === "!role- Crocs de Wrynn") {
-		let role = message.guild.roles.find("name", "Crocs de Wrynn");
-		let member = message.member;
-		member.removeRole(role).catch(console.error);
-		message.channel.send("``Rôle retiré`` :white_check_mark:")
-		message.delete(6000)
-	}
-	if(message.content === "!role+ Main de Lordaeron") {
-		let role = message.guild.roles.find("name", "Main de Lordaeron");
-		let member = message.member;
-		member.addRole(role).catch(console.error);
-		message.channel.send("``Rôle ajouté`` :white_check_mark:")
-		message.delete(6000)
-	}
-	if(message.content === "!role- Main de Lordaeron") {
-		let role = message.guild.roles.find("name", "Main de Lordaeron");
-		let member = message.member;
-		member.removeRole(role).catch(console.error);
-		message.channel.send("``Rôle retiré`` :white_check_mark:")
-		message.delete(6000)
 	}
 	if(message.content === "``Rôle ajouté`` :white_check_mark:") {
 		message.delete(5000)
