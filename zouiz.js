@@ -32,6 +32,11 @@ bot.on('message', message => {
 	}
 });
 
+exports.run = (bot, message, args) => {
+    if(!args || args.size < 1) return message.reply("Un nom de commande doit être spécifié.");
+    delete require.cache[require.resolve(`./${args[0]}.js`)];
+    message.reply(`La commande ${args[0]} a été rechargée !`);
+;}
 
 bot.on("ready", () => {
 	bot.user.setGame("!info");
