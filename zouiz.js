@@ -9,13 +9,36 @@ express() //Port app Heroku
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 const Discord = require("discord.js");
-const test = require("./test.js");
+const fs = require("fs");
 const bot = new Discord.Client();
+const config = require("./config.json");
 const aws = require('aws-sdk'); //Token Heroku
 
 let s3 = new aws.S3({ //Token Heroku
 	accessKeyId: process.env.S3_KEY,
 	secretAccessKey: process.env.TOKEN
+});
+
+fs.readdir("./events/", (err, files) => {
+	if (err) return console.error(err);
+	files.forEach(file => {
+		let eventFunction = require(`./events/${file}`);
+		let eventName = file.split(".")[0];
+		bot.on(eventName, (...args) => eventFunction.run(bot, ...args));
+	});
+});
+
+bot.on('message', message => { 
+	if (message.author.bot) return;
+	if(message.content.indexOf(config.prefix) !== 0) return;
+	const args = message.content.slice(config.prefix.length).trim().split(/ +g/);
+	const command = args.shift().toLowerCase();
+	try {
+		let commandFile = require (`./commands/${command}.js`);
+		commandFile.run(client, message, args);
+	} catch (err) {
+		console.error(err);
+	}
 });
 
 
