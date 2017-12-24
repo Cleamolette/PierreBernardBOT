@@ -318,90 +318,6 @@ bot.on('message', message => {
     if(message.content === "TAISEZ-VOUS") {
         process.exit(1);
     }
-    if(message.content === "!info") { //Embed !info
-    	const embed = {
-  			"title": "BOT \"Mimiron\"",
-  			"description": "Un bot créé par Yenaman, rassemblant quelques commandes (quelques idées de <@246807099332362240> aussi :eyes:)",
-  			"color": 1675721,
-  			"footer": {
-    			"icon_url": "https://cdn.discordapp.com/emojis/280092975407562752.png",
-    			"text": "À demain ! TCHAO TCHAO TCHAO"
-  			},
-  			"thumbnail": {
-    			"url": "https://cdn.discordapp.com/attachments/389904952656658432/391005256131018762/Mimiron.jpg"
-  			},
-  			"author": {
-    			"name": "Créateur : Yenaman#4134",
-    			"icon_url": "https://cdn.discordapp.com/avatars/267357209187450884/a_10003bc4d8cfd24aab15ad4719009c1d.gif"
-  			},
-  			"fields": [
-    		{
-      		"name": "Fonctionnalités",
-      		"value": "C'est un bot qui réagit à certaines phrases que **vous** devrez trouver !"
-    		},
-    		{
-     		 "name": "Uptime",
-      		"value": "Le bot sera en ligne de 9h du matin à 03h du matin pour votre plus grand bonheur <:blobheart:390132491106779136> Pourquoi ? Parce que le bot a besoin d'être hors-ligne 6 heures par jour."
-    		}
-  			]
-		};
-		message.channel.send({embed});
-		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !info`)
-	}
-	if(message.content === "!spam") { //Embed !spam
-		const embed = {
-			"title": "Rappel des règles quant au *spam*",
-			"color": 15472173,
-			"thumbnail": {
-			  "url": "https://cdn.discordapp.com/emojis/332985690075693059.png"
-			},
-			"fields": [
-			  {
-				"name": "Règle 2",
-				"value": "Pas d'insultes/**Spam**/**Flood** ni racisme, homophobie"
-			  },
-			  {
-				"name": "Règle 5",
-				"value": "Conversations bordel nawak : <#388127187615744002> ou <#388170884722196490>. **Sanction : Rétrogradation**"
-			  }
-			]
-		  };
-		  message.channel.send({embed});
-		  var date = new Date().toLocaleTimeString()
-		  bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !spam`)
-	}
-	if(message.content === "!help") { //Embed !help
-		const embed = {
-			"title": "__Commandes__",
-			"description": "Liste des commandes *\"publiques\"* disponibles. Il y en a peu pour le moment.",
-			"color": 12195794,
-			"thumbnail": {
-			  "url": "https://cdn.discordapp.com/emojis/315210423223713802.png"
-			},
-			"fields": [
-			  {
-				"name": "!help",
-				"value": "Affiche ce message"
-			  },
-			  {
-				"name": "!ping",
-				"value": "Envoie une requête au bot et affiche le temps qu'elle a pris pour être renvoyée (le ping du bot en soi)"
-			  },
-			  {
-				"name": "!info",
-				"value": "Affiche tout un tas d'informations au sujet du bot, dont son utilité"
-			  },
-			  {
-				  "name": "!s",
-				  "value": "Affiche un rappel des règles quand au **s**pam"
-			  }
-			]
-		  };
-		  message.channel.send({embed});
-		  var date = new Date().toLocaleTimeString()
-		  bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !help`)
-	}
 	if(message.content === "bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
@@ -477,19 +393,6 @@ bot.on('message', message => {
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande @Mimiron`)
 	}
-	if(message.content === "!aki start") {
-		const embed = {
-			"title": "Information",
-			"description": "La <@356065937318871041> peut parler **Français** :flag_fr: ! Si vous n'avez pas défini vos paramètres de langue, il suffit de lancer **la commande** ``!aki lang fr`` dans <#388170884722196490> ou <#388844665111183360> puis de lancer une **nouvelle partie** avec ``!aki start``. Amusez-vous bien !",
-			"color": 4783882,
-			"thumbnail": {
-			  "url": "https://cdn.discordapp.com/avatars/356065937318871041/58bd0ecfce3f3b90ef4cedd440e2ce5d.png"
-			}
-		  };
-		  message.reply({embed});
-		  var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !aki start`)
-	}
 	if(message.content === "!role+ Garde de Hurlevent") {
 		let role = message.guild.roles.find("name", "La Garde de Hurlevent");
 		let member = message.member;
@@ -531,64 +434,6 @@ bot.on('message', message => {
 		member.removeRole(role).catch(console.error);
 		message.channel.send("``Rôle retiré`` :white_check_mark:")
 		message.delete(6000)
-	}
-	if(message.content === "!rolelist") {
-		const embed = {
-			"title": "Liste des rôles attribuables",
-			"description": "Voici une liste des rôles que vous pouvez vous attribuer en faisant ``!role+`` pour l'ajouter ou ``!role-`` pour le retirer.",
-			"color": 8764472,
-			"thumbnail": {
-			  "url": "https://canary.discordapp.com/assets/ffcdb50ce310bfbe221f01a8e72034a8.svg"
-			},
-			"fields": [
-			  {
-				"name": "Garde de Hurlevent",
-				"value": "``!role+ Garde de Hurlevent`` ou ``!role- Garde de Hurlevent``"
-			  },
-			  {
-				"name": "Crocs de Wrynn",
-				"value": "``!role+ Crocs de Wrynn`` ou ``!role- Crocs de Wrynn``"
-			  },
-			  {
-				"name": "Main de Lordaeron",
-				"value": "``!role+ Main de Lordaeron`` ou ``!role- Main de Lordaeron``"
-			  },
-			  {
-				"name": "<:attention:393127478799106061> ATTENTION ! <:attention:393127478799106061>",
-				"value": "Tout membre retrouvé avec un grade ne lui appartenant pas subira des sanctions de la part du Conseil des neuf."
-			  }
-			]
-		  };
-		  message.channel.send({embed});
-	}
-	if(message.content === "!changelog") {
-		const embed = {
-			"title": "Changelog / Nouveautés",
-			"description": "Mimiron BOT **v1.164**",
-			"color": 5560853,
-			"timestamp": "2017-12-23T16:22:00.000Z",
-			"footer": {
-			  "text": "Dernière mise à jour le"
-			},
-			"thumbnail": {
-			  "url": "https://cdn.discordapp.com/avatars/272416422444007424/c5f309543416a382339859addb4af97e.png"
-			},
-			"fields": [
-			  {
-				"name": "!role+ & !role-",
-				"value": "Permet d'ajouter un rôle correspondant à votre guilde"
-			  },
-			  {
-				"name": "!rolelist",
-				"value": "Affiche la liste des rôles disponibles"
-			  },
-			  {
-				"name": "!changelog",
-				"value": "Affiche cette commande, qui rend compte des dernières nouveautés du bot <:blobcheer:393127479470063616>"
-			  }
-			]
-		  };
-		  message.channel.send({embed});
 	}
 	if(message.content === "``Rôle ajouté`` :white_check_mark:") {
 		message.delete(5000)
