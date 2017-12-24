@@ -43,8 +43,6 @@ bot.on('message', message => {
 	var cont = message.content.slice(prefix.length).split(" ");
 	var args = cont.slice(1);
 	if(!message.content.startsWith(prefix)) return;
-	var cmd = bot.commands.get(cont[0])
-	if (cmd) cmd.run(bot, message, args);
 	if (msg === prefix + 'RELOAD') {
 		message.channel.send({embed:{description:"Toutes les commandes ont été rechargées"}})
 		loadCmds()
