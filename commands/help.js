@@ -20,8 +20,8 @@ module.exports.run = async (bot, message, args) => {
             "value": "Affiche tout un tas d'informations au sujet du bot, dont son utilité"
             },
             {
-            "name": "!s",
-            "value": "Affiche un rappel des règles quand au **s**pam"
+            "name": "!spam",
+            "value": "Affiche un rappel des règles quand au spam"
             }
             ]
         };
