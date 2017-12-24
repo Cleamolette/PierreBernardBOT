@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT **v1.186**",
+        "description": "Mimiron BOT **v1.187**",
         "color": 5560853,
-        "timestamp": "2017-12-24T19:35:00.000Z",
+        "timestamp": "2017-12-24T19:42:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         "fields": [
           {
             "name": "!rolelist",
-            "value": `"Maison Coeur de Lion" et "Escadron Loups-de-Guerre" ajoutés`
+            "value": `:four: guildes ajoutées`
           },
           {
             "name": "[INTERNE] Dossier ./commands/",

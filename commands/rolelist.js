@@ -29,7 +29,11 @@ module.exports.run = async (bot, message, args) => {
           },
           {
             "name": "Rempart du Roi",
-            "value": "``!role- Rempart du Roi`` ou ``!role+ Rempart du Roi``"
+            "value": "``!role+ Rempart du Roi`` ou ``!role- Rempart du Roi``"
+          },
+          {
+            "name": "Fondation Ethernae",
+            "value": "``!role+ Fondation Ethernae`` ou ``!role- Fondation Ethernae``"
           },
           {
             "name": "<:attention:393127478799106061> ATTENTION ! <:attention:393127478799106061>",

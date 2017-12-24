@@ -41,4 +41,11 @@ if(message.content === "!role+ Rempart du Roi") {
     message.channel.send("``Rôle ajouté`` :white_check_mark:")
     message.delete(6000)
 }
+if(message.content === "!role+ Fondation Ethernae") {
+    let role = message.guild.roles.find("name", "Fondation Ethernae");
+    let member = message.member;
+    member.addRole(role).catch(console.error);
+    message.channel.send("``Rôle ajouté`` :white_check_mark:")
+    message.delete(6000)
+}
 }
