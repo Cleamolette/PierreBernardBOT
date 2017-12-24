@@ -25,7 +25,7 @@ fs.readdir("./commands/", (err, files) => {
 	files.forEach(file => {
 	  let eventFunction = require(`./commands/${file}`);
 	  let eventName = file.split(".")[0];
-	  client.on(eventName, (...args) => eventFunction.run(client, ...args));
+	  bot.on(eventName, (...args) => eventFunction.run(bot, ...args));
 	});
  });
 
@@ -36,7 +36,7 @@ bot.on('message', message => {
   	const command = args.shift().toLowerCase();
   	try {
     	let commandFile = require(`./commands/${command}.js`);
-    	commandFile.run(client, message, args);
+    	commandFile.run(bot, message, args);
   	} catch (err) {
     	console.error(err);
   }
