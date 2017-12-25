@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-if(message.content.contains("Garde de Hurlevent")) {
+if(message.content.contain("Garde de Hurlevent")) {
     let role = message.guild.roles.find("name", "🔰 La Garde de Hurlevent");
     let member = message.member;
     member.addRole(role).catch(console.error);
