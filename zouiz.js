@@ -280,42 +280,6 @@ bot.on('message', message => {
 //	if(message.content === "z") {
 //		message.react('🇿')
 //	}
-    if(message.content === "TAISEZ-VOUS !") {
-		process.exit(1);
-    }
-    if(message.content === "Taisez-vous !") {
-        process.exit(1);
-    }
-    if(message.content === "TAISEZ VOUS !") {
-        process.exit(1);
-    }
-    if(message.content === "Taisez vous !") {
-        process.exit(1);
-    }
-    if(message.content === "TAISEZ VOUS") {
-        process.exit(1);
-    }
-    if(message.content === "Taisez vous") {
-        process.exit(1);
-    }
-    if(message.content === "taisez-vous !") {
-        process.exit(1);
-    }
-    if(message.content === "taisez vous !") {
-        process.exit(1);
-    }
-    if(message.content === "taisez vous") {
-        process.exit(1);
-    }
-    if(message.content === "taisez-vous") {
-        process.exit(1);
-    }
-    if(message.content === "Taisez-vous") {
-        process.exit(1);
-    }
-    if(message.content === "TAISEZ-VOUS") {
-        process.exit(1);
-    }
 	if(message.content === "bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
