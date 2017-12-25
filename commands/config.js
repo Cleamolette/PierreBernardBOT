@@ -20,6 +20,11 @@ if(message.content === "!config") {
 }
 if(message.content.includes("restart")) {
     if(message.author.id !== '267357209187450884') return;
-    process.exit(1);
+    const embed = {
+        "title": "Redémarrage",
+        "description": "Un redémarrage du bot a été lancé.\n\nRetour dans 10 secondes.",
+        "color": 16711680
+      };
+      message.channel.send({embed});
 }
 }
