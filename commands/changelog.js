@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT **v1.193**",
+        "description": "Mimiron BOT **v1.197**",
         "color": 5560853,
-        "timestamp": "2017-12-25T16:22:00.000Z",
+        "timestamp": "2017-12-25T22:53:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
         },
         "fields": [
           {
-            "name": "!rolelist",
-            "value": `:four: guildes ajoutées`
+            "name": "!config",
+            "value": `Commande réservée à la haute administration du bot`
           },
           {
             "name": "[INTERNE] Dossier ./commands/",
