@@ -1,5 +1,5 @@
-const agree = "GreenTick";
-const disagree = "RedTick";
+const agree = "395357069051691018";
+const disagree = "395357068976062475";
 
 module.exports.run = async (bot, message, args) => {
     let msg = await message.channel.send("Votez !");
