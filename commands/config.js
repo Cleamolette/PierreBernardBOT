@@ -23,13 +23,13 @@ if(message.content === "!config") {
 }
 if(message.content.includes("restart")) {
     if(message.author.id !== '267357209187450884') return;
-    message.channel.send("Un redémarrage du bot a été lancé.")
     const embed = {
         "title": "Redémarrage",
         "description": "Retour dans 10 secondes.",
         "color": 16711680
       };
       message.channel.send({embed});
+      message.channel.send("Un redémarrage du bot a été lancé.")
       var date = new Date().toLocaleTimeString()
       bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !config **restart**`)
         console.log(`>> Commande !config restart`)
