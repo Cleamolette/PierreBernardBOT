@@ -23,3 +23,4 @@ module.exports.run = async (bot, message, args) => {
       };
       message.channel.send({embed});
 }
+//mémo: faire en sorte que !help soit faite en MP
