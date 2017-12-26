@@ -1,7 +1,7 @@
 module.exports.run = async (bot, message, args) => {
     async function purge() {
         message.delete();
-        if(!message.member.roles.find("name", "Le Conseil", "7ARG")) {
+        if(!message.member.roles.find("name", "Le Conseil")) {
             message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
             return;
         }
