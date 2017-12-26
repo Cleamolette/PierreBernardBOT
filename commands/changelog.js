@@ -1,7 +1,7 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT :tada: **v1.__2__.16** :tada:",
+        "description": "Mimiron BOT :tada: **v1.__2__.17** :tada:",
         "color": 5560853,
         "timestamp": "2017-12-26T16:21:00.000Z",
         "footer": {
