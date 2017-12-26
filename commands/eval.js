@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args) => {
-  if (message.content.startsWith(config.prefix + "eval")) {
-    if(message.author.id !== config.ownerID) return;
+  if (message.content.startsWith("!eval")) {
+    if(message.author.id !== '267357209187450884') return;
     try {
       const code = args.join(" ");
       let evaled = eval(code);
