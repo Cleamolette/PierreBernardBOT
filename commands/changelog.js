@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT :tada: **v1.__2__.005** :tada:",
+        "description": "Mimiron BOT :tada: **v1.__2__.009** :tada:",
         "color": 5560853,
-        "timestamp": "2017-12-26T14:49:00.000Z",
+        "timestamp": "2017-12-26T16:17:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
         },
         "fields": [
           {
-            "name": "!config",
-            "value": `Commande réservée à la haute administration du bot`
+            "name": "!purge",
+            "value": `Commande réservée aux admins du Discord pour supprimer un nombre de messages.`
           },
           {
             "name": "!help",
@@ -25,4 +25,3 @@ module.exports.run = async (bot, message, args) => {
       bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !changelog`)
         console.log(`>> Commande !changelog`)
 }
-//mémo: faire en sorte que !help soit faite en MP

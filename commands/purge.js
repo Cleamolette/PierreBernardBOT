@@ -5,12 +5,15 @@ module.exports.run = async (bot, message, args) => {
             message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
             return;
         }
+        else if(message.author.id !== '267357209187450884') return;
         if(isNaN(args[0])) {
             message.channel.send(`Syntaxe de la commande :\n \`!purge <nombre de messages à supprimer>\``);
             return;
         }
         const fetched = await message.channel.fetchMessages({limit: args[0]});
-        console.log(fetched.size + ' messages trouvés, suppression en cours...');
+        console.log(fetched.size + ' messages supprimés ✅');
+        bot.channels.get("389843676966158348").send(fetched.size + ' messages supprimés :check:')
+        bot.channels.get("391601508158013440").send(fetched.size + ' messages supprimés :check:')
         message.channel.bulkDelete(fetched)
             .catch(error => message.channel.send(`Erreur : ${error}`));
     }
