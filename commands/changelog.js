@@ -1,7 +1,7 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT :tada: **v1.__2__.26** :tada:",
+        "description": "Mimiron BOT :tada: **v1.__2__.32** :tada:",
         "color": 5560853,
         "timestamp": "2017-12-26T20:32:00.000Z",
         "footer": {
@@ -26,6 +26,7 @@ module.exports.run = async (bot, message, args) => {
         ]
       };
       message.channel.send({embed});
+      var date = new Date().toLocaleTimeString()
       bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !changelog`)
         console.log(`>> Commande !changelog`)
 }

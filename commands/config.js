@@ -17,6 +17,7 @@ if(message.content === "!config") {
         ]
       };
       message.channel.send({embed});
+      var date = new Date().toLocaleTimeString()
       bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !config`)
         console.log(`>> Commande !config`)
 }
@@ -28,6 +29,7 @@ if(message.content.includes("restart")) {
         "color": 16711680
       };
       message.channel.send({embed});
+      var date = new Date().toLocaleTimeString()
       bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !config **restart**`)
         console.log(`>> Commande !config restart`)
 }
