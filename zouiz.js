@@ -44,7 +44,7 @@ bot.on("ready", () => {
 	bot.user.setGame("!info");
 	//bot.user.setUsername('Mimiron')
 	//bot.user.setAvatar("./Mimiron.jpg")
-	console.log("TyelasBOT : Opérationnel ^^");
+	console.log("MimironBOT : Opérationnel 👍");
 });
 
 bot.on('message', message => {
@@ -63,8 +63,8 @@ bot.on('message', message => {
 //	}
 	if(message.content.includes("😡")) {
 		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
-		console.log("Quelqu'un est un homme en COLÈRE")
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Homme en colère`)
+		console.log("Quelqu'un est un homme en COLÈRE")
 	}
 	if(message.content === "JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5") {
 		message.delete(1000);
@@ -72,18 +72,22 @@ bot.on('message', message => {
 	if(message.content === "*Hello darkness my old friend*") {
 		message.channel.send("TG Huro")
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Hello darkness my old friend*`)
+		console.log(`>> Commande "Hello darkness my old friend"`)
 	}
 	if(message.content === "*Hello darkness my old friends*") {
 		message.channel.send("TG Huro")
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Hello darkness my old friends*`)
+		console.log(`>> Commande "Hello darkness my old friends"`)
 	}
 	if(message.content === "_Hello darkness my old friend_") {
 		message.channel.send("TG Huro")
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Hello darkness my old friend_`)
+		console.log(`>> Commande "Hello darkness my old friend"`)
 	}
 	if(message.content === "_Hello darkness my old friends_") {
 		message.channel.send("TG Huro")
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Hello darkness my old friends_`)
+		console.log(`>> Commande "Hello darkness my old friends"`)
 	}
 	if(message.content === "TG Huro") {
 		message.delete(300)
@@ -91,10 +95,12 @@ bot.on('message', message => {
 	if(message.content === "Nagui") {
 		message.channel.send("NAGUI COUCOU")
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Nagui`)
+		console.log(`>> Commande Nagui`)
 	}
 	if(message.content === "nagui") {
 		message.channel.send("NAGUI COUCOU")
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande nagui`)
+		console.log(`>> Commande nagui`)
 	}
 	if(message.content === "NAGUI COUCOU") {
 		message.delete(1000)
@@ -284,76 +290,91 @@ bot.on('message', message => {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande bouton rouge`)
+		console.log(`>> Commande "bouton rouge"`)
 	}
 	if(message.content === "Bouton rouge") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Bouton rouge`)
+		console.log(`>> Commande "Bouton rouge"`)
 	}
 	if(message.content === "Appuie sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Appuie sur le bouton rouge`)
+		console.log(`>> Commande "Appuie sur le bouton rouge"`)
 	}
 	if(message.content === "*Appuie sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Appuie sur le bouton rouge*`)
+		console.log(`>> Commande "Appuie sur le bouton rouge"`)
 	}
 	if(message.content === "_Appuie sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Appuie sur le bouton rouge_`)
+		console.log(`>> Commande "Appuie sur le bouton rouge"`)
 	}
 	if(message.content === "appuie sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande appuie sur le bouton rouge`)
+		console.log(`>> Commande "appuie sur le bouton rouge"`)
 	}
 	if(message.content === "*appuie sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *appuie sur le bouton rouge*`)
+		console.log(`>> Commande "appuie sur le bouton rouge"`)
 	}
 	if(message.content === "_appuie sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _appuie sur le bouton rouge_`)
+		console.log(`>> Commande "appuie sur le bouton rouge"`)
 	}
 	if(message.content === "Appuyer sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Appuyer sur le bouton rouge`)
+		console.log(`>> Commande "appuyer sur le bouton rouge"`)
 	}
 	if(message.content === "*Appuyer sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Appuyer sur le bouton rouge*`)
+		console.log(`>> Commande "Appuyer sur le bouton rouge"`)
 	}
 	if(message.content === "_Appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Appuyer sur le bouton rouge_`)
+		console.log(`>> Commande "Appuyer sur le bouton rouge"`)
 	}
 	if(message.content === "appuyer sur le bouton rouge") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande appuyer sur le bouton rouge`)
+		console.log(`>> Commande "appuyer sur le bouton rouge"`)
 	}
 	if(message.content === "*appuyer sur le bouton rouge*") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *appuyer sur le bouton rouge*`)
+        console.log(`>> Commande "appuyer sur le bouton rouge"`)
 	}
 	if(message.content === "_appuyer sur le bouton rouge_") {
 		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _appuyer sur le bouton rouge_`)
+        console.log(`>> Commande "appuyer sur le bouton rouge"`)
 	}
 	if(message.content.includes("<@272416422444007424>")) {
 		message.react(':ThumbsUp:391304799599067146')
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande @Mimiron`)
+        console.log(`>> Commande @Mimiron`)
 	}
 	if(message.content === "``Rôle ajouté`` :white_check_mark:") {
 		message.delete(5000)

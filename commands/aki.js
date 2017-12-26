@@ -11,5 +11,6 @@ if(message.content.includes("start")) {
       message.reply({embed});
       var date = new Date().toLocaleTimeString()
     bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !aki start`)
+        console.log(`>> Commande !aki **start**`)
 }
 }

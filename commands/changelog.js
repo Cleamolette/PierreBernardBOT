@@ -22,5 +22,7 @@ module.exports.run = async (bot, message, args) => {
         ]
       };
       message.channel.send({embed});
+      bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !changelog`)
+        console.log(`>> Commande !changelog`)
 }
 //mémo: faire en sorte que !help soit faite en MP

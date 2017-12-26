@@ -40,4 +40,5 @@ module.exports.run = async (bot, message, args) => {
         message.author.send({embed});
         var date = new Date().toLocaleTimeString()
         bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !help`)
+        console.log(`>> Commande !help`)
 }
