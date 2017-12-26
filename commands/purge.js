@@ -4,8 +4,8 @@ module.exports.run = async (bot, message, args) => {
         if(!message.member.roles.find("name", "Le Conseil")) {
             message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
             return;
+        if(message.author.id !== '267357209187450884') return;
         }
-        else if(message.author.id !== '267357209187450884') return;
         if(isNaN(args[0])) {
             message.channel.send(`Syntaxe de la commande :\n \`!purge <nombre de messages à supprimer>\``);
             return;

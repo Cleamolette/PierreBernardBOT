@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT :tada: **v1.__2__.009** :tada:",
+        "description": "Mimiron BOT :tada: **v1.__2__.10** :tada:",
         "color": 5560853,
-        "timestamp": "2017-12-26T16:17:00.000Z",
+        "timestamp": "2017-12-26T16:21:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
@@ -16,8 +16,8 @@ module.exports.run = async (bot, message, args) => {
             "value": `Commande réservée aux admins du Discord pour supprimer un nombre de messages.`
           },
           {
-            "name": "!help",
-            "value": "Ajout des dernières commandes + Fait que la commande s'envoie en MP au vu de sa taille"
+            "name": "!say",
+            "value": "Le bot dit une phrase que vous voulez"
           }
         ]
       };
