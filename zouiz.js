@@ -387,8 +387,10 @@ bot.on('message', message => {
 	}
 });
 
-bot.on('guildMemberAdd', member => {
-	message.channel.send(`Vous êtes notre ${message.guild.memberCount}ème membre ! :tada:`)
-});
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.find('name', 'member-log');
+	if (!channel) return;
+	channel.send(`Welcome to the server, ${member}`);
+  });
 
 bot.login(process.env.TOKEN);
