@@ -22,6 +22,18 @@ module.exports.run = async (bot, message, args) => {
             {
             "name": "!spam",
             "value": "Affiche un rappel des règles quand au spam"
+            },
+            {
+                "name": "!changelog",
+                "value": "Affiche les dernières nouveautés en date du bot"
+            },
+            {
+                "name": "!config",
+                "value": ":spy:"
+            },
+            {
+                "name": "!role+ / !role- / !rolelist",
+                "value": "Système d'auto-assignation de rôles de guildes ou d'organisation (faire !rolelist en premier)"
             }
             ]
         };
