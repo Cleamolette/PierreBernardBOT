@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT **v1.2.43**",
+        "description": "Mimiron BOT **v1.2.47**",
         "color": 5560853,
-        "timestamp": "2017-12-26T23:46:00.000Z",
+        "timestamp": "2017-12-27T00:19:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
         },
         "fields": [
           {
-            "name": "!purge",
-            "value": `Commande réservée aux admins du Discord pour supprimer un nombre de messages.`
+            "name": "!suggestion",
+            "value": `Commande qui permet de savoir ce que vous voulez voir dans le bot ! Merci de ne pas en abuser toutefois.`
           },
           {
             "name": "!say",
