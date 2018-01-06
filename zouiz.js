@@ -62,10 +62,10 @@ bot.on('message', message => {
 //		console.log("Quelqu'un a osé tiré la langue.")
 //	}
 	if(message.content.includes("😡")) {
-		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
+		message.channel.send("GET BAMBOOZLED ! https://yenaman.has-destroyed.me/7404f7f.png")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Homme en colère`)
-		console.log("Quelqu'un est un homme en COLÈRE")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Homme en colère BAMBOOZLED`)
+		console.log("Quelqu'un est un homme en COLÈRE BAMBOOZLED")
 	}
 	if(message.content === "JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5") {
 		message.delete(1000);
