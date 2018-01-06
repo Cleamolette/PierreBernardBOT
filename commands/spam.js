@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
             },
             {
             "name": "Règle 5",
-            "value": "Conversations bordel nawak : #club-vip (accessible sur demande) ou <#388170884722196490>. **Sanction : Rétrogradation**"
+            "value": "Conversations bordel nawak : <#388170884722196490> ou <#388844665111183360>. **Sanction : Rétrogradation**"
             }
             ]
         };
