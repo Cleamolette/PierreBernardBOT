@@ -383,9 +383,6 @@ bot.on('message', message => {
 	if(message.content === "``Rôle retiré`` :white_check_mark:") {
 		message.delete(5000)
 	}
-	if(message.content.includes("Un redémarrage du bot a été lancé.")) {
-		process.exit(1);
-	}
 });
 
 bot.login(process.env.TOKEN);
