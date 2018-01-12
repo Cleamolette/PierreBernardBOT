@@ -6,8 +6,9 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 const config = require("./config.json");
-
-let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
+const sql = require("sqlite");
+const prefix = config.prefix;
+sql.open("./score.sqlite");
 
 express() //Port app Heroku
   .use(express.static(path.join(__dirname, 'public')))
@@ -388,29 +389,45 @@ bot.on('message', message => {
 	if(message.content.includes("Un redémarrage du bot a été lancé.")) {
 		process.exit(1);
 	}
-	
-});
+	if (message.author.bot) return;
+	if (message.channel.type !== "text") return;
 
-bot.on('message', message => {
-	if(message.author.id === '272416422444007424') return;
-	if (!points[message.author.id]) points[message.author.id] = {
-		points: 0,
-		level: 0
-	  };
-	  let userData = points[message.author.id];
-	  userData.points++;
-
-	  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-	  if (curLevel > userData.level) {
-		userData.level = curLevel;
-		message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
-	  }
-	if (message.content.startsWith("!level")) {
-		message.reply(`You are currently level ${userData.level}, with ${userData.points} points.`);
+	if (message.content.startsWith("ping23")) {
+		message.channel.send("pong!");
 	}
-	fs.writeFile("./points.json", JSON.stringify(points), (err) => {
-		if (err) console.error(err)
+
+	sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {	
+		if (!row) {
+			sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+		} else {
+			let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
+			if (curLevel > row.level) {
+				row.level = curLevel;
+				sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
+				message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
+			}
+			sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
+		}
+	}).catch(() => {
+		console.error;
+		sql.run("CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)").then(() => {
+			sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+		});
 	});
+	if (!message.content.startsWith(prefix)) return;
+	if (message.content.startsWith(prefix + "level")) {
+		sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+			if (!row) return message.reply("Your current level is 0");
+			message.reply(`Your current level is ${row.level}`);
+		});
+	} else
+
+	if (message.content.startsWith("!points")) {
+		sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+			if (!row) return message.reply("sadly you do not have any points yet!");
+			message.reply(`you currently have ${row.points} points, good going!`);
+		});
+	}
 });
 
 bot.login(process.env.TOKEN);
