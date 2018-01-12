@@ -386,8 +386,9 @@ bot.on('message', message => {
 		message.delete(5000)
 	}
 	if(message.content.includes("Un redémarrage du bot a été lancé.")) {
-		process.exit(0);
+		process.exit(1);
 	}
+	if(message.author.id === '272416422444007424') return;
 	if (!points[message.author.id]) points[message.author.id] = {
 		points: 0,
 		level: 0
