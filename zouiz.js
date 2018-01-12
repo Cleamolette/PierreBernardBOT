@@ -387,7 +387,7 @@ bot.on('message', message => {
 		message.delete(5000)
 	}
 	if(message.content.includes("Un redémarrage du bot a été lancé.")) {
-		process.exit(1);
+		process.exit(0);
 	}
 	if (message.author.bot) return;
 	if (message.channel.type !== "text") return;
