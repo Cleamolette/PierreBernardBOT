@@ -7,6 +7,8 @@ const fs = require("fs");
 const bot = new Discord.Client();
 const config = require("./config.json");
 
+let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
+
 express() //Port app Heroku
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -383,9 +385,21 @@ bot.on('message', message => {
 	if(message.content === "``Rôle retiré`` :white_check_mark:") {
 		message.delete(5000)
 	}
-	 if(message.content.includes("Un redémarrage du bot a été lancé.")) {
- 		process.exit(0);
- 	}
+	if(message.content.includes("Un redémarrage du bot a été lancé.")) {
+		process.exit(0);
+	}
+	if (!points[message.author.id]) points[message.author.id] = {
+		points: 0,
+		level: 0
+	  };
+	  let userData = points[message.author.id];
+	  userData.points++;
+
+	  let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
+	  if (curLevel > userData.level) {
+		userData.level = curLevel;
+		message.reply(`You"ve leveled up to level **${curLevel}**! Ain"t that dandy?`);
+	  }
 });
 
 bot.login(process.env.TOKEN);
