@@ -388,6 +388,10 @@ bot.on('message', message => {
 	if(message.content.includes("Un redémarrage du bot a été lancé.")) {
 		process.exit(1);
 	}
+	
+});
+
+bot.on('message', message => {
 	if(message.author.id === '272416422444007424') return;
 	if (!points[message.author.id]) points[message.author.id] = {
 		points: 0,
