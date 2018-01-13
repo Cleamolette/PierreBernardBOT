@@ -36,6 +36,26 @@ module.exports.run = async (bot, message, args) => {
             "value": "``!role+ Fondation Ethernae`` ou ``!role- Fondation Ethernae``"
           },
           {
+            "name": "Veilleurs",
+            "value": "``!role+ Veilleurs`` ou ``!role- Veilleurs``"
+          },
+          {
+            "name": "Chope Sucrée",
+            "value": "``!role+ Chope Sucrée`` ou ``!role- Chope Sucrée``"
+          },
+          {
+            "name": "Famille Malfrey",
+            "value": "``!role+ Famille Malfrey`` ou ``!role- Famille Malfrey``"
+          },
+          {
+            "name": "Traque Nocturne",
+            "value": "``!role+ Traque Nocturne`` ou ``!role- Traque Nocturne``"
+          },
+          {
+            "name": "Aaronverse",
+            "value": "``!role+ Aaronverse`` ou ``!role- Aaronverse``"
+          },
+          {
             "name": "<:attention:393127478799106061> ATTENTION ! <:attention:393127478799106061>",
             "value": "Tout membre retrouvé avec un grade ne lui appartenant pas subira des sanctions de la part du Conseil des neuf."
           }
