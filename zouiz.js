@@ -8,6 +8,7 @@ const bot = new Discord.Client();
 const config = require("./config.json");
 const sql = require("sqlite");
 const prefix = config.prefix;
+require('newrelic');
 sql.open("./score.sqlite");
 
 express() //Port app Heroku
