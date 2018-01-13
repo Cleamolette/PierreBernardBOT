@@ -1,4 +1,4 @@
-require('newrelic');
+require('newrelic.js');
 const express = require('express') //Port app Heroku
 const path = require('path') //Port app Heroku
 const PORT = process.env.PORT || 5000 //Port app Heroku
