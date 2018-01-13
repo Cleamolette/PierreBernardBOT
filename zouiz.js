@@ -10,8 +10,8 @@ const config = require("./config.json");
 const sql = require("sqlite");
 const prefix = config.prefix;
 sql.open("./score.sqlite");
-var time = require('node-time');
-var now = new time.Date();
+const time = require('node-time');
+const now = new time.Date();
 now.setTimezone("Europe/Paris");
 
 express() //Port app Heroku
