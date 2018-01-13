@@ -10,6 +10,9 @@ const config = require("./config.json");
 const sql = require("sqlite");
 const prefix = config.prefix;
 sql.open("./score.sqlite");
+var time = require('time');
+var now = new time.Date();
+now.setTimezone("Europe/Paris");
 
 express() //Port app Heroku
   .use(express.static(path.join(__dirname, 'public')))
@@ -67,7 +70,7 @@ bot.on('message', message => {
 //	}
 	if(message.content.includes("😡")) {
 		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
-		var date = new Date().toLocaleTimeString()
+		var date = new time.Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Homme en colère`)
 		console.log("Quelqu'un est un homme en COLÈRE")
 	}
