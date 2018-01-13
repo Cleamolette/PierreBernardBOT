@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT **v1.2.47**",
+        "description": "Mimiron BOT **v1.2.82**",
         "color": 5560853,
-        "timestamp": "2017-12-27T00:19:00.000Z",
+        "timestamp": "2018-01-13T16:17:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
@@ -12,16 +12,12 @@ module.exports.run = async (bot, message, args) => {
         },
         "fields": [
           {
-            "name": "!suggestion",
-            "value": `Commande qui permet de savoir ce que vous voulez voir dans le bot ! Merci de ne pas en abuser toutefois.`
+            "name": "!rolelist / !role- / !role+",
+            "value": `Mise à jour de la liste.`
           },
           {
-            "name": "!say",
-            "value": "Le bot dit une phrase que vous voulez"
-          },
-          {
-            "name": "!membres",
-            "value": "Affiche le nombre de membres du serveur"
+            "name": "!help",
+            "value": `Mise à jour de la liste.`
           }
         ]
       };
