@@ -10,7 +10,7 @@ const config = require("./config.json");
 const sql = require("sqlite");
 const prefix = config.prefix;
 sql.open("./score.sqlite");
-var time = require('time');
+var time = require('node-time');
 var now = new time.Date();
 now.setTimezone("Europe/Paris");
 
