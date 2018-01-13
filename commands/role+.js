@@ -75,4 +75,54 @@ module.exports.run = async (bot, message, args) => {
         bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role+ **Fondation Ethernae**`)
             console.log(`>> Commande !role+ Fondation Ethernae`)
     }
+    if(message.content.includes("Veilleurs")) {
+        let role = message.guild.roles.find("name", "Veilleurs");
+        let member = message.member;
+        member.addRole(role).catch(console.error);
+        message.channel.send("``Rôle ajouté`` :white_check_mark:")
+        message.delete(6000)
+        var date = new Date().toLocaleTimeString()
+        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role+ **Veilleurs**`)
+            console.log(`>> Commande !role+ Veilleurs`)
+    }
+    if(message.content.includes("Chope Sucrée")) {
+        let role = message.guild.roles.find("name", "Chope Sucrée");
+        let member = message.member;
+        member.addRole(role).catch(console.error);
+        message.channel.send("``Rôle ajouté`` :white_check_mark:")
+        message.delete(6000)
+        var date = new Date().toLocaleTimeString()
+        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role+ **Chope Sucrée**`)
+            console.log(`>> Commande !role+ Chope Sucrée`)
+    }
+    if(message.content.includes("Famille Malfrey")) {
+        let role = message.guild.roles.find("name", "Famille Malfrey");
+        let member = message.member;
+        member.addRole(role).catch(console.error);
+        message.channel.send("``Rôle ajouté`` :white_check_mark:")
+        message.delete(6000)
+        var date = new Date().toLocaleTimeString()
+        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role+ **Famille Malfrey**`)
+            console.log(`>> Commande !role+ Famille Malfrey`)
+    }
+    if(message.content.includes("Traque Nocturne")) {
+        let role = message.guild.roles.find("name", "Traque Nocturne");
+        let member = message.member;
+        member.addRole(role).catch(console.error);
+        message.channel.send("``Rôle ajouté`` :white_check_mark:")
+        message.delete(6000)
+        var date = new Date().toLocaleTimeString()
+        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role+ **Traque Nocturne**`)
+            console.log(`>> Commande !role+ Traque Nocturne`)
+    }
+    if(message.content.includes("Aaronverse")) {
+        let role = message.guild.roles.find("name", "Aaronverse");
+        let member = message.member;
+        member.addRole(role).catch(console.error);
+        message.channel.send("``Rôle ajouté`` :white_check_mark:")
+        message.delete(6000)
+        var date = new Date().toLocaleTimeString()
+        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role+ **Aaronverse**`)
+            console.log(`>> Commande !role+ Aaronverse`)
+    }
     }
