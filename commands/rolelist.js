@@ -61,7 +61,7 @@ module.exports.run = async (bot, message, args) => {
           }
         ]
       };
-      message.channel.send({embed});
+      message.author.send({embed});
       var date = new Date().toLocaleTimeString()
       bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !rolelist`)
         console.log(`>> Commande !rolelist`)
