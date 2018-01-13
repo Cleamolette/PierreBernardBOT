@@ -7,12 +7,9 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 const config = require("./config.json");
-const sql = require("sqlite");
-const prefix = config.prefix;
-sql.open("./score.sqlite");
-const time = require('node-time');
-const now = time.Date();
-now.setTimezone("Europe/Paris");
+//const sql = require("sqlite");
+//const prefix = config.prefix;
+//sql.open("./score.sqlite");
 
 express() //Port app Heroku
   .use(express.static(path.join(__dirname, 'public')))
@@ -70,7 +67,7 @@ bot.on('message', message => {
 //	}
 	if(message.content.includes("😡")) {
 		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
-		var date = new time.Date().toLocaleTimeString()
+		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Homme en colère`)
 		console.log("Quelqu'un est un homme en COLÈRE")
 	}
