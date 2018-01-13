@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express') //Port app Heroku
 const path = require('path') //Port app Heroku
 const PORT = process.env.PORT || 5000 //Port app Heroku
@@ -8,7 +9,6 @@ const bot = new Discord.Client();
 const config = require("./config.json");
 const sql = require("sqlite");
 const prefix = config.prefix;
-require('newrelic');
 sql.open("./score.sqlite");
 
 express() //Port app Heroku
