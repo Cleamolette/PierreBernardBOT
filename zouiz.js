@@ -11,7 +11,7 @@ const sql = require("sqlite");
 const prefix = config.prefix;
 sql.open("./score.sqlite");
 const time = require('node-time');
-const now = new time.Date();
+const now = time.Date();
 now.setTimezone("Europe/Paris");
 
 express() //Port app Heroku
