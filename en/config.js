@@ -2,34 +2,34 @@ module.exports.run = async (bot, message, args) => {
 if(message.content === "!config") {
     if(message.author.id !== '267357209187450884') return;
     const embed = {
-        "title": "Config Admin",
-        "description": "Cette commande est réservée à la haute administration du Bot. \nC'est à dire uniquement à <@267357209187450884>.\nCe message ne vous est donc forcément pas destiné.",
+        "title": "Admin Config",
+        "description": "This command is reserved to the high administration of the Bot. \nThis means, only at <@267357209187450884>.\nThis message is obviously not for you.",
         "color": 16711680,
         "fields": [
           {
-            "name": ":arrow_down: Commandes disponibles :arrow_down: ",
+            "name": ":arrow_down: Available commands :arrow_down: ",
             "value": ":arrow_down:                                               :arrow_down:"
           },
           {
             "name": "restart",
-            "value": "Redémarre le bot (10 secondes environ)"
+            "value": "Restarts the bot (10 seconds approximatively)"
           }
         ]
       };
       message.channel.send({embed});
       var date = new Date().toLocaleTimeString()
-      bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !config`)
-        console.log(`>> Commande !config`)
+      bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command !config`)
+        console.log(`>> Command !config`)
 }
 if(message.content.includes("restart")) {
     if(message.author.id !== '267357209187450884') return;
     const embed = {
-        "title": "Redémarrage",
-        "description": "Retour dans 10 secondes.",
+        "title": "Restarting",
+        "description": "Coming back in 10 seconds.",
         "color": 16711680
       };
       message.channel.send({embed});
-      message.channel.send("Un redémarrage du bot a été lancé.")
+      message.channel.send("A bot restart has been triggered.")
       var date = new Date().toLocaleTimeString()
       bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !config **restart**`)
         console.log(`>> Commande !config restart`).then(process.exit(0));
