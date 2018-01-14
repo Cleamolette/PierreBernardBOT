@@ -292,19 +292,19 @@ bot.on('message', message => {
 //		message.react('🇿')
 //	}
 	if(message.content === "red button") {
-		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
+		message.channel.send("Oh! Have you seen? It's gorgeously reddish, don't press it!")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande bouton rouge`)
-		console.log(`>> Commande "bouton rouge"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command bouton rouge`)
+		console.log(`>> Command "bouton rouge"`)
 	}
 	if(message.content === "Bouton rouge") {
-		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
+		message.channel.send("Oh! Have you seen? It's gorgeously reddish, don't press it!")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Bouton rouge`)
-		console.log(`>> Commande "Bouton rouge"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command Bouton rouge`)
+		console.log(`>> Command "Bouton rouge"`)
 	}
-	if(message.content === "Appuie sur le bouton rouge") {
-		message.channel.send("Mais, pourquoi avez-vous été faire une chose pareille ? Vous n’avez donc pas vu le panneau : **« NE PAS APPUYER SUR CE BOUTON ! »** ? Comment allons-nous finir les essais avec le mécanisme d’autodestruction activé ?")
+	if(message.content === "Press the red button") {
+		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Appuie sur le bouton rouge`)
 		console.log(`>> Commande "Appuie sur le bouton rouge"`)
