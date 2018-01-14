@@ -1,28 +1,28 @@
 module.exports.run = async (bot, message, args) => {
 if(message.content === "!role-") {
-    message.channel.send("Merci de préciser le rôle que vous voulez retirer. \n(Une liste complète est disponible en faisant ``!rolelist``)")
+    message.channel.send("Please precise the role you want to auto-remove. \n(A complete list is available by running ``!rolelist``)")
     var date = new Date().toLocaleTimeString()
-    bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role-`)
-        console.log(`>> Commande !role-`)
+    bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command !role-`)
+        console.log(`>> Command !role-`)
 }
 if(message.content.includes("Garde de Hurlevent")) {
     let role = message.guild.roles.find("name", "🔰 La Garde de Hurlevent");
     let member = message.member;
     member.removeRole(role).catch(console.error);
-    message.channel.send("``Rôle retiré`` :white_check_mark:")
+    message.channel.send("``Role removed`` :white_check_mark:")
     message.delete(6000)
     var date = new Date().toLocaleTimeString()
-    bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role- **Garde de Hurlevent**`)
-        console.log(`>> Commande !role- Garde de Hurlevent`)
+    bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command !role- **Garde de Hurlevent**`)
+        console.log(`>> Command !role- Garde de Hurlevent`)
 }
 if(message.content.includes("Crocs de Wrynn")) {
     let role = message.guild.roles.find("name", "Crocs de Wrynn");
     let member = message.member;
     member.removeRole(role).catch(console.error);
-    message.channel.send("``Rôle retiré`` :white_check_mark:")
+    message.channel.send("``Role removed`` :white_check_mark:")
     message.delete(6000)
     var date = new Date().toLocaleTimeString()
-    bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !role- **Crocs de Wrynn**`)
+    bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command !role- **Crocs de Wrynn**`)
         console.log(`>> Commande !role- Crocs de Wrynn`)
 }
 if(message.content.includes("Main de Lordaeron")) {
