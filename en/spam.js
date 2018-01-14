@@ -1,23 +1,23 @@
 module.exports.run = async (bot, message, args) => {
         const embed = {
-            "title": "Rappel des règles quant au *spam*",
+            "title": "Rules reminder about *spam*",
             "color": 15472173,
             "thumbnail": {
               "url": "https://cdn.discordapp.com/emojis/332985690075693059.png"
             },
             "fields": [
             {
-            "name": "Règle 2",
-            "value": "Pas d'insultes/**Spam**/**Flood** ni racisme, homophobie"
+            "name": "Rule 2",
+            "value": "No insults/**Spam**/**Flood** racism, or homophobia"
             },
             {
-            "name": "Règle 5",
-            "value": "Conversations bordel nawak : <#388170884722196490> ou <#388844665111183360>. **Sanction : Rétrogradation**"
+            "name": "Rule 5",
+            "value": "Shitpost : <#388170884722196490> or <#388844665111183360>. **Sanction : Demotion**"
             }
             ]
         };
         message.channel.send({embed});
         var date = new Date().toLocaleTimeString()
-        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !spam`)
-        console.log(`>> Commande !spam`)
+        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command !spam`)
+        console.log(`>> Command !spam`)
     }
