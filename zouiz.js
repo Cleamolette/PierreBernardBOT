@@ -45,7 +45,7 @@ bot.on('message', message => {
 });
 
 bot.on("ready", () => {
-	bot.user.setActivity("Jacques Cheminade", LISTENING);
+	bot.user.setGame("!info");
 	//bot.user.setUsername('Mimiron')
 	//bot.user.setAvatar("./Mimiron.jpg")
 	console.log("MimironBOT : Opérationnel 👍");
