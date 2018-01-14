@@ -306,74 +306,74 @@ bot.on('message', message => {
 	if(message.content === "Press the red button") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Press the red button`)
-		console.log(`>> Commande "Press the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command Press the red button`)
+		console.log(`>> Command "Press the red button"`)
 	}
 	if(message.content === "*Press the red button*") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Press the red button*`)
-		console.log(`>> Commande "Press the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command *Press the red button*`)
+		console.log(`>> Command "Press the red button"`)
 	}
 	if(message.content === "_Press the red button_") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Press the red button_`)
-		console.log(`>> Commande "Press the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command _Press the red button_`)
+		console.log(`>> Command "Press the red button"`)
 	}
 	if(message.content === "press the red button") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande press the red button`)
-		console.log(`>> Commande "press the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command press the red button`)
+		console.log(`>> Command "press the red button"`)
 	}
 	if(message.content === "*press the red button*") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *press the red button*`)
-		console.log(`>> Commande "press the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command *press the red button*`)
+		console.log(`>> Command "press the red button"`)
 	}
 	if(message.content === "_press the red button_") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _press the red button_`)
-		console.log(`>> Commande "press the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command _press the red button_`)
+		console.log(`>> Command "press the red button"`)
 	}
 	if(message.content === "Pressing the red button") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Pressing the red button`)
-		console.log(`>> Commande "Pressing the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command Pressing the red button`)
+		console.log(`>> Command "Pressing the red button"`)
 	}
 	if(message.content === "*Pressing the red button*") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Pressing the red button*`)
-		console.log(`>> Commande "Pressing the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command *Pressing the red button*`)
+		console.log(`>> Command "Pressing the red button"`)
 	}
 	if(message.content === "_Pressing the red button_") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Pressing the red button_`)
-		console.log(`>> Commande "Pressing the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command _Pressing the red button_`)
+		console.log(`>> Command "Pressing the red button"`)
 	}
 	if(message.content === "pressing the red button") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande pressing the red button`)
-		console.log(`>> Commande "pressing the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command pressing the red button`)
+		console.log(`>> Command "pressing the red button"`)
 	}
 	if(message.content === "*pressing the red button*") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *pressing the red button*`)
-        console.log(`>> Commande "pressing the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command *pressing the red button*`)
+        console.log(`>> Command "pressing the red button"`)
 	}
 	if(message.content === "_pressing the red button_") {
 		message.channel.send("Now why would you go and do something like that? Didn't you see the sign that said **« DO NOT PUSH THIS BUTTON ! »** ? How will we finish testing with the self-destruct mechanism active?")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _pressing the red button_`)
-        console.log(`>> Commande "pressing the red button"`)
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command _pressing the red button_`)
+        console.log(`>> Command "pressing the red button"`)
 	}
 	if(message.content.includes("<@272416422444007424>")) {
 		message.react(':ThumbsUp:391304799599067146')
