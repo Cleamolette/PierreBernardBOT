@@ -1,0 +1,5 @@
+files:
+  - source: '*.js'
+    ignore:
+      - /node_modules/
+    translation: /%two_letters_code%/%original_file_name%/
