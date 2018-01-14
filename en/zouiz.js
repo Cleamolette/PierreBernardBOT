@@ -1,4 +1,3 @@
-const newrelic = require('newrelic');
 const express = require('express') //Heroku app port
 const path = require('path') //Heroku app port
 const PORT = process.env.PORT || 5000 //Heroku app port
