@@ -1,8 +1,8 @@
 const newrelic = require('newrelic');
-const express = require('express') //Port app Heroku
-const path = require('path') //Port app Heroku
-const PORT = process.env.PORT || 5000 //Port app Heroku
-const aws = require('aws-sdk'); //Token Heroku
+const express = require('express') //Heroku app port
+const path = require('path') //Heroku app port
+const PORT = process.env.PORT || 5000 //Heroku app port
+const aws = require('aws-sdk'); //Heroku Token
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
@@ -11,13 +11,13 @@ const config = require("./config.json");
 //const prefix = config.prefix;
 //sql.open("./score.sqlite");
 
-express() //Port app Heroku
+express() //Heroku app port
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-let s3 = new aws.S3({ //Token Heroku
+let s3 = new aws.S3({ //Heroku Token
 	accessKeyId: process.env.S3_KEY,
 	secretAccessKey: process.env.TOKEN
 });
@@ -48,66 +48,66 @@ bot.on("ready", () => {
 	bot.user.setGame("!info");
 	//bot.user.setUsername('Mimiron')
 	//bot.user.setAvatar("./Mimiron.jpg")
-	console.log("MimironBOT : Opérationnel 👍");
+	console.log("MimironBOT : Ready to go 👍");
 });
 
 bot.on('message', message => {
 //	if(message.content.includes("^^")) {
 //		message.react(':this:390917955942219796')
 //		message.react(':this2:390917955984293889')
-//		console.log("Quelqu'un a voulu faire une ÉMOTICÔNE SOURIRE.")
+//		console.log("Someone made a SMILEY FACE.")
 //	}
 //	if(message.content.includes("😄")) {
 //		message.react('😡')
-//		console.log("Quelqu'un a osé faire un sourire.")
+//		console.log("Someone smiled.")
 //	}
 //	if(message.content.includes("😛")) {
 //		message.react('😡')
-//		console.log("Quelqu'un a osé tiré la langue.")
+//		console.log("Someone stuck out the tongue.")
 //	}
 	if(message.content.includes("😡")) {
-		message.channel.send("JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5")
+		message.channel.send("I AM AN ANGRY MAN ! https://yenaman.s-ul.eu/J3RY8Io5")
 		var date = new Date().toLocaleTimeString()
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Homme en colère`)
-		console.log("Quelqu'un est un homme en COLÈRE")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command Angry Man`)
+		console.log("Someone is an ANGRY MAN")
 	}
-	if(message.content === "JE SUIS UN HOMME EN COLÈRE ! https://yenaman.s-ul.eu/J3RY8Io5") {
+	if(message.content === "I AM AN ANGRY MAN ! https://yenaman.s-ul.eu/J3RY8Io5") {
 		message.delete(1000);
 	}
 	if(message.content === "*Hello darkness my old friend*") {
-		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Hello darkness my old friend*`)
-		console.log(`>> Commande "Hello darkness my old friend"`)
+		message.channel.send("STFU Huro")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command *Hello darkness my old friend*`)
+		console.log(`>> Command "Hello darkness my old friend"`)
 	}
 	if(message.content === "*Hello darkness my old friends*") {
-		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande *Hello darkness my old friends*`)
-		console.log(`>> Commande "Hello darkness my old friends"`)
+		message.channel.send("STFU Huro")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command *Hello darkness my old friends*`)
+		console.log(`>> Command "Hello darkness my old friends"`)
 	}
 	if(message.content === "_Hello darkness my old friend_") {
-		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Hello darkness my old friend_`)
-		console.log(`>> Commande "Hello darkness my old friend"`)
+		message.channel.send("STFU Huro")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command _Hello darkness my old friend_`)
+		console.log(`>> Command "Hello darkness my old friend"`)
 	}
 	if(message.content === "_Hello darkness my old friends_") {
-		message.channel.send("TG Huro")
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande _Hello darkness my old friends_`)
-		console.log(`>> Commande "Hello darkness my old friends"`)
+		message.channel.send("STFU Huro")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command _Hello darkness my old friends_`)
+		console.log(`>> Command "Hello darkness my old friends"`)
 	}
-	if(message.content === "TG Huro") {
+	if(message.content === "STFU Huro") {
 		message.delete(300)
 	}
 	if(message.content === "Nagui") {
-		message.channel.send("NAGUI COUCOU")
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande Nagui`)
-		console.log(`>> Commande Nagui`)
+		message.channel.send("HELLO NAGUI")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command Nagui`)
+		console.log(`>> Command Nagui`)
 	}
 	if(message.content === "nagui") {
-		message.channel.send("NAGUI COUCOU")
-		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande nagui`)
-		console.log(`>> Commande nagui`)
+		message.channel.send("HELLO NAGUI")
+		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command nagui`)
+		console.log(`>> Command nagui`)
 	}
-	if(message.content === "NAGUI COUCOU") {
+	if(message.content === "HELLO NAGUI") {
 		message.delete(1000)
 	}
 //	if(message.content.includes("XD")) {
@@ -291,7 +291,7 @@ bot.on('message', message => {
 //	if(message.content === "z") {
 //		message.react('🇿')
 //	}
-	if(message.content === "bouton rouge") {
+	if(message.content === "red button") {
 		message.channel.send("Oh ! Vous avez vu ? Il est magnifiquement rougeâtre, n'appuyez pas dessus !")
 		var date = new Date().toLocaleTimeString()
 		bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande bouton rouge`)
