@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   			"color": 1675721,
   			"footer": {
     			"icon_url": "https://cdn.discordapp.com/emojis/280092975407562752.png",
-    			"text": "Goobye ! TCHAO TCHAO TCHAO"
+    			"text": "Goodbye ! TCHAO TCHAO TCHAO"
   			},
   			"thumbnail": {
     			"url": "https://cdn.discordapp.com/attachments/389904952656658432/391005256131018762/Mimiron.jpg"
