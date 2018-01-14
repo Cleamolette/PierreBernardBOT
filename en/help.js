@@ -1,7 +1,7 @@
 module.exports.run = async (bot, message, args) => {
             const embed = {
-            "title": "__Commandes__",
-            "description": "Liste des commandes *\"publiques\"* disponibles. Il y en a peu pour le moment.",
+            "title": "__Commands__",
+            "description": "List of all *\"public\"* commands available. ",
             "color": 12195794,
             "thumbnail": {
             "url": "https://cdn.discordapp.com/emojis/315210423223713802.png"
@@ -9,23 +9,23 @@ module.exports.run = async (bot, message, args) => {
             "fields": [
             {
                 "name": "!help",
-                "value": "Affiche ce message"
+                "value": "Displays this message"
             },
             {
                 "name": "!ping",
-                "value": "Envoie une requête au bot et affiche le temps qu'elle a pris pour être renvoyée (le ping du bot en soi)"
+                "value": "Pings the bot"
             },
             {
                 "name": "!info",
-                "value": "Affiche tout un tas d'informations au sujet du bot, dont son utilité"
+                "value": "Displays some information about the bot"
             },
             {
                 "name": "!spam",
-                "value": "Affiche un rappel des règles quant au spam"
+                "value": "Shows the rules about spamming"
             },
             {
                 "name": "!changelog",
-                "value": "Affiche les dernières nouveautés en date du bot"
+                "value": "Displays the new features of the bot"
             },
             {
                 "name": "!config",
@@ -33,28 +33,28 @@ module.exports.run = async (bot, message, args) => {
             },
             {
                 "name": "!role+ / !role- / !rolelist",
-                "value": "Système d'auto-assignation de rôles de guildes ou d'organisation (faire !rolelist en premier)"
+                "value": "Auto-assignation system of guild roles or organizations (do !rolelist first of all)"
             },
             {
-                "name": "!membres",
-                "value": "Affiche le nombre de membres du serveur."
+                "name": "!members",
+                "value": "Displays the number of members in the server."
             },
             {
                 "name": "!purge",
-                "value": "Terrestre et + uniquement, permet de supprimer des messages."
+                "value": "Terrestre role and above only, can delete multiple messages."
             },
             {
                 "name": "!say",
-                "value": "Fait dire au bot ce que vous voulez !"
+                "value": "Say whatever you want to say to the bot, it will respond the same!"
             },
             {
                 "name": "!suggestion",
-                "value": "M'envoie directement une suggestion. Toutefois, n'en abusez pas sous peine de sanctions."
+                "value": "Sends me directly a suggestion. Although, don't abuse it, or I will sanction."
             }
             ]
         };
         message.author.send({embed});
         var date = new Date().toLocaleTimeString()
-        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !help`)
-        console.log(`>> Commande !help`)
+        bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command !help`)
+        console.log(`>> Command !help`)
 }
