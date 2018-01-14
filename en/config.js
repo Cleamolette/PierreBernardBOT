@@ -3,7 +3,7 @@ if(message.content === "!config") {
     if(message.author.id !== '267357209187450884') return;
     const embed = {
         "title": "Admin Config",
-        "description": "This command is reserved to the high administration of the Bot. \nThis means, only at <@267357209187450884>.\nThis message is obviously not for you.",
+        "description": "This command is reserved to the high administration of the Bot. \nThis means, only for <@267357209187450884>.\nSo, this message is obviously not for you.",
         "color": 16711680,
         "fields": [
           {
