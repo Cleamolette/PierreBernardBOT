@@ -31,7 +31,7 @@ if(message.content.includes("restart")) {
       message.channel.send({embed});
       message.channel.send("A bot restart has been triggered.")
       var date = new Date().toLocaleTimeString()
-      bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Commande !config **restart**`)
-        console.log(`>> Commande !config restart`).then(process.exit(0));
+      bot.channels.get("391601508158013440").send(`${date}(GMT+0) >> Command !config **restart**`)
+        console.log(`>> Command !config restart`).then(process.exit(0));
 }
 }
