@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog",
-        "description": "Mimiron BOT **v1.2.82**",
+        "description": "Mimiron BOT **v1.3.48**",
         "color": 5560853,
-        "timestamp": "2018-01-13T16:17:00.000Z",
+        "timestamp": "2018-01-15T19:25:00.000Z",
         "footer": {
           "text": "Last update"
         },
@@ -12,12 +12,8 @@ module.exports.run = async (bot, message, args) => {
         },
         "fields": [
           {
-            "name": "!rolelist / !role- / !role+",
-            value": `List update`
-          },
-          {
-            "name": "!help",
-            value": `List update`
+            "name": "Discord.JS v11.3.0",
+            "value": `Mise à jour`
           }
         ]
       };
