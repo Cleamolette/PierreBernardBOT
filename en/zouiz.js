@@ -1,5 +1,5 @@
-const express = require('express') //Heroku app port
-const path = require('path') //Heroku app port
+const express = require('express'); //Port app Heroku
+const path = require('path'); //Port app Heroku
 const PORT = process.env.PORT || 5000 //Heroku app port
 const aws = require('aws-sdk'); //Heroku Token
 const Discord = require("discord.js");
@@ -11,10 +11,12 @@ const config = require("./config.json");
 //sql.open("./score.sqlite");
 
 express() //Heroku app port
-  .use(express.static(path.join(__dirname, 'public')))
+  .use(express.static(__dirname + '/public'))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
+  .get('/', function(req, res) {
+	  res.render('index');
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 let s3 = new aws.S3({ //Heroku Token
 	accessKeyId: process.env.S3_KEY,
