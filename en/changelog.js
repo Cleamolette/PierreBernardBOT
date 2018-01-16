@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         "fields": [
           {
             "name": "Discord.JS v11.3.0",
-            "value": `Mise à jour`
+            "value": `Update`
           }
         ]
       };
