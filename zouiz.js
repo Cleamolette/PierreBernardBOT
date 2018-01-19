@@ -429,8 +429,7 @@ bot.on('message', message => {
 //	}
 });
 
-const config = require('./config.json'),
-	Eris = require('eris'),
+const Eris = require('eris'),
 	boteris = new Eris(process.env.TOKEN, {
 		messageLimit: 0
 	}),
