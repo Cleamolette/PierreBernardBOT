@@ -6,7 +6,6 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 const config = require("./config.json");
-const Eris = require('eris')
 //const sql = require("sqlite");
 //const prefix = config.prefix;
 //sql.open("./score.sqlite");
@@ -32,38 +31,7 @@ fs.readdir("./commands/", (err, files) => {
 	  bot.on(eventName, (...args) => eventFunction.run(bot, ...args));
 	});
  });
-;
 
-const boteris = new Eris(process.env.TOKEN, {
-	messageLimit: 0
-}),
-CountingChannelManager = require('./CountingChannelManager');
-
-let countingChannels = new Map();
-boteris.on('disconnected', () => console.warn('Counting bot disconnected'));
-
-boteris.once('ready', () => {
-	return bot.guilds.forEach(g => {
-		return g.channels.filter(c => c.name.startsWith('counting')).forEach(c => {
-			let manager = new CountingChannelManager(c);
-			manager.init();
-			return countingChannels.set(c.id, manager);
-		});
-	});
-});
-
-boteris.on('channelCreate', channel => {
-	if (channel.name.startsWith('counting')) {
-		let manager = new CountingChannelManager(channel);
-		manager.init();
-		return countingChannels.set(channel.id, manager);
-	}
-});
-
-boteris.on('messageCreate', message => {
-	if (countingChannels.has(message.channel.id))
-		return countingChannels.get(message.channel.id).handleNewMessage(message);
-});
 
 bot.on('message', message => {
 	if (message.author.bot) return;
@@ -460,5 +428,42 @@ bot.on('message', message => {
 //		});
 //	}
 });
+
+const config = require('./config.json'),
+	Eris = require('eris'),
+	boteris = new Eris(process.env.TOKEN, {
+		messageLimit: 0
+	}),
+	CountingChannelManager = require('./CountingChannelManager');
+
+let countingChannels = new Map();
+
+boteris.on('ready', () => console.info('Counting bot connected'));
+boteris.on('disconnected', () => console.warn('Counting bot disconnected'));
+
+boteris.once('ready', () => {
+	return boteris.guilds.forEach(g => {
+		return g.channels.filter(c => c.name.startsWith('counting')).forEach(c => {
+			let manager = new CountingChannelManager(c);
+			manager.init();
+			return countingChannels.set(c.id, manager);
+		});
+	});
+});
+
+boteris.on('channelCreate', channel => {
+	if (channel.name.startsWith('counting')) {
+		let manager = new CountingChannelManager(channel);
+		manager.init();
+		return countingChannels.set(channel.id, manager);
+	}
+});
+
+boteris.on('messageCreate', message => {
+	if (countingChannels.has(message.channel.id))
+		return countingChannels.get(message.channel.id).handleNewMessage(message);
+});
+
+boteris.connect();
 
 bot.login(process.env.TOKEN);
