@@ -34,7 +34,7 @@ fs.readdir("./commands/", (err, files) => {
  });
 ;
 
-const boteris = new Eris(config.token, {
+const boteris = new Eris(process.env.TOKEN, {
 	messageLimit: 0
 }),
 CountingChannelManager = require('./CountingChannelManager');
