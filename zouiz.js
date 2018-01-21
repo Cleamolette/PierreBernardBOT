@@ -427,11 +427,9 @@ bot.on('message', message => {
 //			message.reply(`you currently have ${row.points} points, good going!`);
 //		});
 //	}
-	if(message.author.id === '272416422444007424') { 
-		return;
+	if(!message.author.id === 272416422444007424) {
 		bot.channels.get("404670112147177483").send(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
 	     }
-	
 	console.log(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
 });
 
