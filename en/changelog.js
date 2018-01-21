@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog",
-        "description": "Mimiron BOT **v1.3.64**",
+        "description": "Mimiron BOT **v1.3.48**",
         "color": 5560853,
-        "timestamp": "2018-01-19T20:10:00.000Z",
+        "timestamp": "2018-01-15T19:25:00.000Z",
         "footer": {
           "text": "Last update"
         },
@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
         },
         "fields": [
           {
-            "name": "Counting",
-            "value": `Vous pouvez maintenant compter dans un channel prévu à cet effet !`
+            "name": "Discord.JS v11.3.0",
+            "value": `Update`
           }
         ]
       };
