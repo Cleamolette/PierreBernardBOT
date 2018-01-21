@@ -429,7 +429,7 @@ bot.on('message', message => {
 //	}
 	if(message.author.id === '272416422444007424') { 
 		return;
-		else(bot.channels.get("404670112147177483").send(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
+		bot.channels.get("404670112147177483").send(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
 	     }
 	
 	console.log(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
