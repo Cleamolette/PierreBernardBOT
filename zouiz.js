@@ -427,7 +427,7 @@ bot.on('message', message => {
 //			message.reply(`you currently have ${row.points} points, good going!`);
 //		});
 //	}
-	console.log(`> Nouveau message de ${message.author.username} : ${message.content}`);
+	console.log(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
 });
 
 const Eris = require('eris'),
