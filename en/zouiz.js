@@ -32,6 +32,7 @@ fs.readdir("./commands/", (err, files) => {
 	});
  });
 
+
 bot.on('message', message => {
 	if (message.author.bot) return;
   	if(message.content.indexOf(config.prefix) !== 0) return;
@@ -426,6 +427,43 @@ bot.on('message', message => {
 //			message.reply(`you currently have ${row.points} points, good going!`);
 //		});
 //	}
+	console.log(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
 });
+
+const Eris = require('eris'),
+	boteris = new Eris(process.env.TOKEN, {
+		messageLimit: 0
+	}),
+	CountingChannelManager = require('./CountingChannelManager');
+
+let countingChannels = new Map();
+
+boteris.on('ready', () => console.info('Counting bot connected'));
+boteris.on('disconnected', () => console.warn('Counting bot disconnected'));
+
+boteris.once('ready', () => {
+	return boteris.guilds.forEach(g => {
+		return g.channels.filter(c => c.name.startsWith('counting')).forEach(c => {
+			let manager = new CountingChannelManager(c);
+			manager.init();
+			return countingChannels.set(c.id, manager);
+		});
+	});
+});
+
+boteris.on('channelCreate', channel => {
+	if (channel.name.startsWith('counting')) {
+		let manager = new CountingChannelManager(channel);
+		manager.init();
+		return countingChannels.set(channel.id, manager);
+	}
+});
+
+boteris.on('messageCreate', message => {
+	if (countingChannels.has(message.channel.id))
+		return countingChannels.get(message.channel.id).handleNewMessage(message);
+});
+
+boteris.connect();
 
 bot.login(process.env.TOKEN);
