@@ -1,5 +1,5 @@
-const express = require('express'); //Port app Heroku
-const path = require('path'); //Port app Heroku
+const express = require('express'); //Heroku app port
+const path = require('path'); //Heroku app port
 const PORT = process.env.PORT || 5000 //Heroku app port
 const aws = require('aws-sdk'); //Heroku Token
 const Discord = require("discord.js");
@@ -427,7 +427,7 @@ bot.on('message', message => {
 //			message.reply(`you currently have ${row.points} points, good going!`);
 //		});
 //	}
-	console.log(`> Nouveau message dans ${message.channel.name} de ${message.author.username} : ${message.content}`);
+	console.log(`> New message in ${message.channel.name} from ${message.author.username} : ${message.content}`);
 });
 
 const Eris = require('eris'),
