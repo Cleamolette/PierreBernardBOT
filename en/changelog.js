@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
         "fields": [
           {
             "name": "Counting",
-            "value": `Now you can count in a dedicated channel!`
+            "value": `Vous pouvez maintenant compter dans un channel prévu à cet effet !`
           }
         ]
       };
