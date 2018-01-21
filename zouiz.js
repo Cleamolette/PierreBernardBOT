@@ -427,6 +427,7 @@ bot.on('message', message => {
 //			message.reply(`you currently have ${row.points} points, good going!`);
 //		});
 //	}
+	console.log(message.content);
 });
 
 const Eris = require('eris'),
