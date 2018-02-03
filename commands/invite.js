@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args) => {
     if(message.content === "!invite 1") {
-        message.channel.createInvite({maxAge: 0, maxUses: 1})
+        bot.channels.get("409456956466659330").createInvite({maxAge: 0, maxUses: 1})
         .then(invite => message.channel.send(`1 invitation à ce channel : discord.gg/${invite.code}`))
         .catch(console.error);
     }
