@@ -3,6 +3,9 @@ module.exports.run = async (bot, message, args) => {
         message.delete();
         if(!message.member.roles.find("name", "Terrestre")) {
             message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
+        }
+        else if(!message.member.roles.find("name", "Modérateur")) {
+            message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
             return;
         }
         if(isNaN(args[0])) {

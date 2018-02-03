@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT **v1.3.64**",
+        "description": "Mimiron BOT **v1.3.65**",
         "color": 5560853,
-        "timestamp": "2018-01-19T20:10:00.000Z",
+        "timestamp": "2018-01-19T20:11:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
