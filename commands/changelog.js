@@ -1,9 +1,9 @@
 module.exports.run = async (bot, message, args) => {
     const embed = {
         "title": "Changelog / Nouveautés",
-        "description": "Mimiron BOT **v1.3.65**",
+        "description": "Mimiron BOT **v1.4.00**",
         "color": 5560853,
-        "timestamp": "2018-01-19T20:11:00.000Z",
+        "timestamp": "2018-02-03T21:33:00.000Z",
         "footer": {
           "text": "Dernière mise à jour le"
         },
@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
         },
         "fields": [
           {
-            "name": "Counting",
-            "value": `Vous pouvez maintenant compter dans un channel prévu à cet effet !`
+            "name": "Purge",
+            "value": `Problèmes de permissions`
           }
         ]
       };
