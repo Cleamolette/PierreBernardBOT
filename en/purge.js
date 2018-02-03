@@ -1,7 +1,7 @@
 module.exports.run = async (bot, message, args) => {
     async function purge() {
         message.delete();
-        if(!message.member.roles.find("name", "Terrestre")) {
+        if(!message.member.roles.some(r=>["Terrestre", "Coordinateur", "Modérateur"].includes(r.name)) ) {
             message.channel.send(`You don't have the permission to run this command`);
             return;
         }
