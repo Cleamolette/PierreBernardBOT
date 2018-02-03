@@ -1,16 +1,10 @@
 module.exports.run = async (bot, message, args) => {
     async function purge() {
         message.delete();
-        if(!message.member.roles.find("name", "Terrestre")) {
+        if(!message.member.roles.some(r=>["Terrestre", "Coordinateur", "Modérateur"].includes(r.name)) ) {
             message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
+            return;
         }
-        else if(!message.member.roles.find("name", "Modérateur")) {
-            message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
-        }
-        else if(!message.member.roles.find("name", "Coordinateur")) {
-            message.channel.send(`Vous n'avez pas la permission d'utiliser cette commande.`);
-        }
-        return;
         if(isNaN(args[0])) {
             message.channel.send(`Syntaxe de la commande :\n \`!purge <nombre de messages à supprimer>\``);
             return;
